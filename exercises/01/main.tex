@@ -10,6 +10,49 @@
 	\item Funktionsanalyse \seite{45}, gebrochenrationale Funktionen, Asymptoten \seite{46}
 \end{inhalt}
 
+\aufgabe{Gleichung lösen}
+Löse die Gleichung $\e^{5x}-\e^{3x}=6\e^x$.\\
+\textit{Hinweis: Du brauchst ungefähr alle gelernten Methoden!}
+\begin{lsg}{}
+	\begin{multicols}{2}
+	\begin{align*}
+		\e^{5x}-\e^{3x}&=6\e^x &&|-6\e^x\\
+		\e^{5x}-\e^{3x}-6\e^x&=0 &&|\ \text{Ausklammern}\\
+		\e^x\cdot(\e^{4x}-\e^{2x}-6)&=0 &&|\ \text{Nullprodukt und Substitution: } z=\e^{2x}\\
+		z^2-z-6&=0 &&|\ \text{Mitternachtsformel}\\
+		z_1=-2 \quad z_2&=3&&|\ \text{Resubstitution: } z_{1/2}=\e^{2\cdot x_{1/2}}\\
+		\e^{2\cdot x_1}&=-2 &&\Rightarrow \text{nicht möglich ($\e^x$ immer $>0$)}\\
+		\e^{2\cdot x_2}&= 3 &&\rightsquigarrow x=\frac{\ln(3)}{2}
+	\end{align*}
+	\end{multicols}
+\end{lsg}
+
+\aufgabe{Exponentialfunktion}
+\begin{enumerate}
+	\item Gib $f(x)=25^x$ als natürliche Exponentialfunktion an.
+	\item	Wie unterscheidet sich der Graph von $-\e^{-x}$ von $\e^x$? Formuliere die Erklärung schrittweise.
+\end{enumerate}
+\begin{lsg}{}
+	\begin{enumerate}
+		\item $\e^{\ln(25)\cdot x}$
+		\item 	\begin{itemize}
+					\item $-\e^x$ ist zu $ \e^x$ an der x-Achse gespiegelt
+					\item $\e^{-x}$ ist zu $\e^x$ an der y-Achse gespiegelt
+				\end{itemize}
+				$\Rightarrow -\e^{-x}$ ist zu $\e^x$ an der x- und der y-Achse gespiegelt
+	\end{enumerate}
+\end{lsg}
+
+
+\aufgabe{Integral: }
+Die Gerade $y=x$ und die $x$-Achse begrenzen zusammen mit den Geraden $x=2$ und $x=u$ mit $u>2$ eine Fläche. Bestimmen Sie einen Wert für $u$ so, dass $f(x)=x-\frac{8}{x^2}$ diese Fläche in zwei inhaltsgleiche Teile zerlegt. \cas
+\begin{lsg}{}
+  Bestimme die Flächeninhalte der Teilflächen:\begin{align*}
+  A_1&=\int_2^u\left(x-\left(x-\frac{8}{x^2}\right)\right)\d x&&|\ \text{Fläche zwischen $y=x$ und $f(x)=x-\frac{8}{x^2}$}\\
+  A_2&= \int_2^u\left(x-\frac{8}{x^2}\right)\d x&&|\ \text{Fläche zwischen $f(x)=x-\frac{8}{x^2}$ und $x$-Achse}
+  \end{align*}
+  Gleichsetzten und mittels CAS nach $u$ auflösen ergibt: $u\approx 3,12$
+\end{lsg}
 
 
 

@@ -3,161 +3,7 @@
 
 
 \begin{document}
-\aufgabe{Gleichung lösen}
-Löse die Gleichung $\e^{5x}-\e^{3x}=6\e^x$.\\
-\textit{Hinweis: Du brauchst ungefähr alle gelernten Methoden!}
-\begin{lsg}{}
-	\begin{multicols}{2}
-	\begin{align*}
-		\e^{5x}-\e^{3x}&=6\e^x &&|-6\e^x\\
-		\e^{5x}-\e^{3x}-6\e^x&=0 &&|\ \text{Ausklammern}\\
-		\e^x\cdot(\e^{4x}-\e^{2x}-6)&=0 &&|\ \text{Nullprodukt und Substitution: } z=\e^{2x}\\
-		z^2-z-6&=0 &&|\ \text{Mitternachtsformel}\\
-		z_1=-2 \quad z_2&=3&&|\ \text{Resubstitution: } z_{1/2}=\e^{2\cdot x_{1/2}}\\
-		\e^{2\cdot x_1}&=-2 &&\Rightarrow \text{nicht möglich ($\e^x$ immer $>0$)}\\
-		\e^{2\cdot x_2}&= 3 &&\rightsquigarrow x=\frac{\ln(3)}{2}
-	\end{align*}
-	\end{multicols}
-\end{lsg}
-\aufgabe{Schnittpunkte von Funktionen: } In welchen Punkten schneiden sich die Funktionen?
-\begin{multicols}{3}
-  \begin{enumerate}
-    \item $f(x) = x^2$, $g(x) = 2x$
-    \item $f(x) = \frac 1 2 x^4$, $g(x) = x^2+4$
-  \end{enumerate}
-\end{multicols}
 
-\begin{lsg}{}
-  \begin{multicols}{2}
-    \begin{enumerate}
-      \item \begin{align*}
-        x^2 &= 2x\\
-        x^2-2x &= 0\\
-        \intertext{Mit der Mitternachtsformel: }
-        x_1 &= 0, x_2 =2\\
-        \intertext{Bestimmung der Werte der Stellen: }
-        f(0) &= 0, f(2) = 4\\
-        \LM &= \left\{\ (0|0),(2|4) \ \right\}
-      \end{align*}
-
-      \columnbreak
-      \item
-      \begin{align*}
-        \frac 1 2 x^4 &= x^2+4\\
-        \frac 1 2 x^4 -x^2 -4 &= 0\\
-      \end{align*}
-      Substitution $x^2=u$
-      \begin{align*}
-        \frac 1 2& u^2 -u -4 = 0\\
-        u_{1,2}&=\frac{1\pm\sqrt{1-4*0.5*(-4)}}{1}\\
-        &= 1\pm\sqrt{9}\\
-        u_1 &= 4\quad u_2=-2\\
-      \end{align*}
-      Resubstitution von $u_1$ ($u_2 < 0 \rightarrow $ nicht reelles Ergebnis):
-      \begin{align*}
-        x^2=4\\
-        x_1 = -2, x_2 = 2\\
-        \intertext{Bestimmung der Werte der Stellen: }
-        g(-2)=8, g(2)=8\\
-        \LM = \left\{\ (-2|8),(2|8) \ \right\}
-      \end{align*}
-    \end{enumerate}
-  \end{multicols}
-\end{lsg}
-
-\aufgabe{Exponentialfunktion}
-\begin{enumerate}
-	\item Gib $f(x)=25^x$ als natürliche Exponentialfunktion an.
-	\item	Wie unterscheidet sich der Graph von $-\e^{-x}$ von $\e^x$? Formuliere die Erklärung schrittweise.
-\end{enumerate}
-\begin{lsg}{}
-	\begin{enumerate}
-		\item $\e^{\ln(25)\cdot x}$
-		\item 	\begin{itemize}
-					\item $-\e^x$ ist zu $ \e^x$ an der x-Achse gespiegelt
-					\item $\e^{-x}$ ist zu $\e^x$ an der y-Achse gespiegelt
-				\end{itemize}
-				$\Rightarrow -\e^{-x}$ ist zu $\e^x$ an der x- und der y-Achse gespiegelt
-	\end{enumerate}
-\end{lsg}
-
-\aufgabe{Differentialrechnung: }
-\begin{enumerate}
-	\item Gegeben sei folgende Funktion: $F(x,y)=2x^3-5y+x^2+10x-10$. Bestimmen Sie die Ableitung der durch $F(x,y)=0$ implizit gegebenen Funktion $y=h(x)$.
-	\item Gegeben sind die Funktionen:
-	$f(x) = (u \circ v)(x)$ und $g(x) = (u* v)(x)$
-	Bestimme die Ableitungen von $f$ und $g$ für $u(x)=x^2$ und $v(x)=\sin(2x)$
-	\item Bestimme jeweils $f_i'(3)$
-	\begin{itemize}
-		\item $f_1(x) = (x+5)^2$
-		\item $f_2(x) = \frac{1}{(x-5)^2}$
-	\end{itemize}
-\end{enumerate}
-\begin{lsg}{}
-	\begin{enumerate}
-		\item Aus $F(x,y)=0$ und $y=h(x)$ folgt:\begin{alignat*}{2}
-		&2x^3-5y+10x-10=0\quad&&|\ \text{Nach $y=$ umformen}\\
-		&y=\frac{2}{5} x^3+\frac{1}{5} x^2+2x-2 &&\Rightarrow h(x)\\
-		&h'(x)=\frac{6}{5} x^2+\frac{2}{5}x+2
-		\end{alignat*}
-		\item \begin{align*}
-		f'(x)&=\left(u(v(x))\right)'=\left({\sin(2x)}^2\right)'=2\sin(2x)\cdot \cos(2x) \cdot 2=4\sin(2x)\cdot \cos(2x)\\
-		g'(x)&=(u(x)\cdot v(x))'=\left(x^2\cdot \sin(2x)\right)'=2x\cdot \sin(2x)+x^2\cdot 2\cos(2x)
-		\end{align*}
-		\item \begin{align*}
-		f_1'(x)&=2(x+5)&\Rightarrow  &f_1'(3)=16\\
-		f_2'(x)&=\frac{-2}{(x-5)^3}&\Rightarrow &f_2'(3)=\frac{1}{4}
-		\end{align*}
-	\end{enumerate}
-\end{lsg}
-\aufgabe{Tangenten: }\cas
-\begin{enumerate}
-	\item Gegeben ist die Funktion $g$ mit $\ g(x)=2x^2+1$. Bestimme die Gleichung der Tangente und der Normalen an den Graphen G von $g$ im Punkt $P(1|3)$.
-  \item Bestimme die Gleichung der Tangente und Normalen an den Graphen G von $g$ mit der Steigung $1$.
-  \item Bestimme die Gleichungen der beiden Tangenten an den Graphen G von $g$, die durch den Punkt $Q(3|17)$ gehen und gib die Berührpunkte der Tangenten mit dem Graphen G von $g$ an.
-\end{enumerate}
-\begin{lsg}{}
-	\begin{align*}
-		\text{Tangentengleichung: }  t(x,x_0)&=g'(x_0)*(x-x_0)+g(x_0)\\ 
-	\text{Normalengleichung: }n(x,x_0)&=-\frac{1}{g'(x_0)}*(x-x_0)+g(x_0) 
-	\end{align*}
-	
-	\begin{enumerate}
-		\item Aus Punkt P(1/3) folgt: $x_0=1,\ g(x_0)=3$ und ableiten ergibt $\ g'(x)=4x$
-		\begin{align*}
-		\text{Damit gilt: }\ t(x)&=4*(x-1)+3 \\
-		\text{und: }\ n(x)&=-\frac{1}{4}*(x-1)+3 
-		\end{align*}
-		\item \begin{align*}
-			\text{Tangentengleichung: }\ g'(x_0)&=1 \rightsquigarrow x_0=\frac{1}{4}\\
-			g\left(\frac{1}{4}\right)&=\frac{9}{8}\\
-			t(x)&=1*\left(x-\frac{1}{4}\right)+\frac{9}{8}\\
-			\text{Normalengleichung:}\ -\frac{1}{g'(x_0)}&=1 \rightsquigarrow x_0=-\frac{1}{4}\\
-			g\left(-\frac{1}{4}\right)&=\frac{9}{8}\\
-			n(x)&=1*\left(x+\frac{1}{4}\right)+\frac{9}{8}
-			\end{align*}
-			\item Aus dem Punkt $Q(3|517)$ folgt: $\ t(3)=17$, daher gilt für die Tangentengleichungen:\begin{align*}
-			17&=g'(x_0)*(3-x_0)+g(x_0) \rightsquigarrow x_{0,1}=2,\ x_{0,2}=4\\
-			t_1(x)&=8*(x-2)+9\\
-			t_2(x)&=16*(x-4)+33
-			\end{align*}
-	\end{enumerate}
-\end{lsg}
-\aufgabe{Vermischtes: }
-\begin{enumerate}
-	\item Beschreiben Sie in Worten, wie sich der Graph von $g(x)=3\sin(3(x+1))-3$ von $\sin(x)$ unterscheidet.
-	\item Die Gerade $y=x$ und die $x$-Achse begrenzen zusammen mit den Geraden $x=2$ und $x=u$ mit $u>2$ eine Fläche. Bestimmen Sie einen Wert für $u$ so, dass $f(x)=x-\frac{8}{x^2}$ diese Fläche in zwei inhaltsgleiche Teile zerlegt. \cas
-\end{enumerate}
-\begin{lsg}{}
-  \begin{enumerate}
-		\item Amplitude 3, Phasenverschiebung um 1 nach links, Verschiebung um 3 nach unten und Änderung der Periode auf $\frac{2\pi}{3}$
-    \item Bestimme die Flächeninhalte der Teilflächen:\begin{align*}
-    A_1&=\int_2^u\left(x-\left(x-\frac{8}{x^2}\right)\right)\d x&&|\ \text{Fläche zwischen $y=x$ und $f(x)=x-\frac{8}{x^2}$}\\
-    A_2&= \int_2^u\left(x-\frac{8}{x^2}\right)\d x&&|\ \text{Fläche zwischen $f(x)=x-\frac{8}{x^2}$ und $x$-Achse}
-    \end{align*}
-    Gleichsetzten und mittels CAS nach $u$ auflösen ergibt: $u\approx 3,12$
-  \end{enumerate}
-\end{lsg}
 
 
 \aufgabe{Funktionenscharen: }
@@ -180,11 +26,11 @@ Löse die Gleichung $\e^{5x}-\e^{3x}=6\e^x$.\\
 		\item \begin{itemize}
 			\item $0=x^2+2ax+9 \rightsquigarrow x_1=\sqrt{a^2-9}-a,\ x_2=-\sqrt{a^2-9}-a$\\
 			\item $0=5ax+15a \rightsquigarrow x=-3$\\
-			\item $0=x^3-a^2 \rightsquigarrow x=\sqrt[3]{a^2}$\\			
+			\item $0=x^3-a^2 \rightsquigarrow x=\sqrt[3]{a^2}$\\
 			\item $\text{Nullprodukt:}\ x_1=3a,\ x_2=-6a$
 		\end{itemize}
 		\item nvm
-		
+
 	\end{enumerate}
 \end{lsg}
 \aufgabe{Integral: }
@@ -245,6 +91,8 @@ Löse die Gleichung $\e^{5x}-\e^{3x}=6\e^x$.\\
   \end{itemize}
 \end{enumerate}
 
+
+
 \aufgabe{Lineare Gleichungssysteme}
 Löse das Gleichungssystem:
 \begin{alignat*}{4}
@@ -254,26 +102,7 @@ Löse das Gleichungssystem:
 \end{alignat*}
 Interpretiere das LGS und die Lösungsmenge geometrisch.
 
-\aufgabe{Ebenengleichungen: }
-Bestimme die Ebene in der angegebenen Darstellungsform:
-\begin{enumerate}
-	\item $E$ enthält die Punkte $A(2|2|2), B(4|1|3)$ und $C(8|4|5)$. Gib $E$ in Normalenform an. %Parameterform -> Normalenform,
-	\item Die gesuchte Ebene $F$ ist die Spiegelebene zwischen $A(1|4|7)$ und $A'(3|2|3)$. Gib die $F$ in Parameterform an. %Normalenform -> Parameterform
-	\item Die Ebene $G$ enthält die Gerade $\vec x = \vektor{3\\1\\2}+s*\vektor{2\\0\\-1}$ und ist orthogonal zur Ebene $H:-x_1+x_2+2x_3+2=0$. Gib die Ebene $G$ in Koordinatenform an. %Parameterform -> Koordinatenform
-\end{enumerate}
 
-\aufgabe{Schnittgerade: }
-Gib eine Gleichung der Schnittgeraden der Ebenen $E: x_1-x_2+2x_3=7$ und $F:6x_1+x_2-x_3+7=0$ an.
-
-\aufgabe{Abstandsberechnungen Teil 1: }
-Berechne den Abstand des Punktes $R(6|9|4)$ von der Ebene $E: \left[ \vec x -  \vektor{7 \\ 5\\ 2}\right]*\vektor{2\\ 2 \\1}=0$
-
-\aufgabe{Abstands- und Lageberechnungen: }
-Gegeben sind die Ebene \\$E: \left[ \vec x -  \vektor{-1 \\ 4\\ -3}\right]*\vektor{8\\ 1 \\-4}=0$ und die Gerade $g: \vec x=\vektor{7\\5\\-7}+t*\vektor{1\\-4\\1}$.
-\begin{enumerate}
-	\item Zeigen Sie, dass $E$ und $g$ parallel zueinander sind.
-	\item Bestimmen Sie den Abstand von $E$ und $g$.
-\end{enumerate}
 
 \aufgabe{Winkelberechnung}
 \begin{enumerate}
