@@ -112,10 +112,37 @@ Löse die Gleichung $\e^{5x}-\e^{3x}=6\e^x$.\\
 \end{lsg}
 \aufgabe{Tangenten: }\cas
 \begin{enumerate}
-	\item Gegeben ist die Funktion g mit $g(x)=2x^2+1$
-  \item
+	\item Gegeben ist die Funktion $g$ mit $\ g(x)=2x^2+1$. Bestimme die Gleichung der Tangente und der Normalen an den Graphen G von $g$ im Punkt $P(1|3)$.
+  \item Bestimme die Gleichung der Tangente und Normalen an den Graphen G von $g$ mit der Steigung $1$.
+  \item Bestimme die Gleichungen der beiden Tangenten an den Graphen G von $g$, die durch den Punkt $Q(3|17)$ gehen und gib die Berührpunkte der Tangenten mit dem Graphen G von $g$ an.
 \end{enumerate}
-
+\begin{lsg}{}
+	\begin{align*}
+		\text{Tangentengleichung: }  t(x,x_0)&=g'(x_0)*(x-x_0)+g(x_0)\\ 
+	\text{Normalengleichung: }n(x,x_0)&=-\frac{1}{g'(x_0)}*(x-x_0)+g(x_0) 
+	\end{align*}
+	
+	\begin{enumerate}
+		\item Aus Punkt P(1/3) folgt: $x_0=1,\ g(x_0)=3$ und ableiten ergibt $\ g'(x)=4x$
+		\begin{align*}
+		\text{Damit gilt: }\ t(x)&=4*(x-1)+3 \\
+		\text{und: }\ n(x)&=-\frac{1}{4}*(x-1)+3 
+		\end{align*}
+		\item \begin{align*}
+			\text{Tangentengleichung: }\ g'(x_0)&=1 \rightsquigarrow x_0=\frac{1}{4}\\
+			g\left(\frac{1}{4}\right)&=\frac{9}{8}\\
+			t(x)&=1*\left(x-\frac{1}{4}\right)+\frac{9}{8}\\
+			\text{Normalengleichung:}\ -\frac{1}{g'(x_0)}&=1 \rightsquigarrow x_0=-\frac{1}{4}\\
+			g\left(-\frac{1}{4}\right)&=\frac{9}{8}\\
+			n(x)&=1*\left(x+\frac{1}{4}\right)+\frac{9}{8}
+			\end{align*}
+			\item Aus dem Punkt $Q(3|517)$ folgt: $\ t(3)=17$, daher gilt für die Tangentengleichungen:\begin{align*}
+			17&=g'(x_0)*(3-x_0)+g(x_0) \rightsquigarrow x_{0,1}=2,\ x_{0,2}=4\\
+			t_1(x)&=8*(x-2)+9\\
+			t_2(x)&=16*(x-4)+33
+			\end{align*}
+	\end{enumerate}
+\end{lsg}
 \aufgabe{Vermischtes: }
 \begin{enumerate}
 	\item Beschreiben Sie in Worten, wie sich der Graph von $g(x)=3\sin(3(x+1))-3$ von $\sin(x)$ unterscheidet.
@@ -124,7 +151,11 @@ Löse die Gleichung $\e^{5x}-\e^{3x}=6\e^x$.\\
 \begin{lsg}{}
   \begin{enumerate}
 		\item Amplitude 3, Phasenverschiebung um 1 nach links, Verschiebung um 3 nach unten und Änderung der Periode auf $\frac{2\pi}{3}$
-    \item $u\approx 3,12$
+    \item Bestimme die Flächeninhalte der Teilflächen:\begin{align*}
+    A_1&=\int_2^u\left(x-\left(x-\frac{8}{x^2}\right)\right)\d x&&|\ \text{Fläche zwischen $y=x$ und $f(x)=x-\frac{8}{x^2}$}\\
+    A_2&= \int_2^u\left(x-\frac{8}{x^2}\right)\d x&&|\ \text{Fläche zwischen $f(x)=x-\frac{8}{x^2}$ und $x$-Achse}
+    \end{align*}
+    Gleichsetzten und mittels CAS nach $u$ auflösen ergibt: $u\approx 3,12$
   \end{enumerate}
 \end{lsg}
 
@@ -141,15 +172,26 @@ Löse die Gleichung $\e^{5x}-\e^{3x}=6\e^x$.\\
   \item Gegeben ist die Funktionenschar $f_a$ mit $f_a(x)=\frac{1}{a^2}x^3-\frac{3}{9}x^2-9x+5(a+1)$ mit $a<0$.
   \begin{itemize}
     \item Untersuche die Lage des Maxmimums.
-    \item Zeige, dass die Maxima aller Scharkurven auf einer Geraden liegen und gib deren Gleichung an.
+    \item Gib die Gleichung der Gerade an, auf der die Maxima aller Scharkurven liegen.
   \end{itemize}
 \end{enumerate}
-
+\begin{lsg}{}
+	\begin{enumerate}
+		\item \begin{itemize}
+			\item $0=x^2+2ax+9 \rightsquigarrow x_1=\sqrt{a^2-9}-a,\ x_2=-\sqrt{a^2-9}-a$\\
+			\item $0=5ax+15a \rightsquigarrow x=-3$\\
+			\item $0=x^3-a^2 \rightsquigarrow x=\sqrt[3]{a^2}$\\			
+			\item $\text{Nullprodukt:}\ x_1=3a,\ x_2=-6a$
+		\end{itemize}
+		\item nvm
+		
+	\end{enumerate}
+\end{lsg}
 \aufgabe{Integral: }
 \begin{enumerate}
 	\item Welche der Auswahlmöglichkeiten können eingesetzt werden?
 	\begin{equation*}
-		\int\limits_0^5 3x^2+ \frac 1 5 x  \d x = \Box
+		\int\limits_0^5 \left(3x^2+ \frac 1 5 x\right)  \d x = \Box
 	\end{equation*}
   \begin{multicols}{4}
     \begin{itemize}
@@ -161,7 +203,7 @@ Löse die Gleichung $\e^{5x}-\e^{3x}=6\e^x$.\\
   \end{multicols}
 
 
-	\item Bestimmen Sie $\int\limits_0^{10} \e*x \d x$
+	\item Bestimmen Sie $\int\limits_0^{\ln(10)} \e^x \d x$
   \item Berechnen Sie den Gesamtinhalt der Flächen, die durch die Schaubilder der Funktionen $f$ und $g$ eingeschlossen werden:
   \begin{itemize}
     \item $f(x)=x^2, g(x)=2-x^2$
@@ -172,7 +214,7 @@ Löse die Gleichung $\e^{5x}-\e^{3x}=6\e^x$.\\
 \end{enumerate}
 \begin{lsg}{}
   \begin{enumerate}
-    \item
+    \item $\bigg[x^3 + 0,1 x^2\bigg]_0^5$ und $127,5$
     \item
     \item
     \begin{itemize}
