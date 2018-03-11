@@ -1,7 +1,8 @@
 \input{../master/layout.tex}
+\usepackage{tabularx}
 
 \chead{\Large Probeabitur}
-\newcommand{\pts}[1]{\hfill (#1 VP)}
+\newcommand{\pts}[1]{\hfill \mbox{(#1 VP)}}
 \begin{document}
 
 \section{Pflichtteil}
@@ -49,7 +50,7 @@ Die äußere Funktion ist $x^4$, die innere Funktion ist $2x-1$.\\
 \aufgabe{}
 \begin{multicols}{2}
 	Die Abbildung zeigt das Schaubild der Ableitung $f'$ einer Funktion $f$. Skizzieren Sie grob den Verlauf von $f''$ in die Abbildung und geben Sie für jeden der folgenden Sätze an ob er richtig, falsch oder unentscheidbar ist:
-	\begin{itemize}
+	\begin{enumerate}
 		\item $f$ schneidet die $y$-Achse bei $(0|1)$.
 		\item Das Schaubild von $f$ hat bei $x=-1$ einen Tiefpunkt.
 		\item Das Schaubild von $f$ hat für $-2\leq x \leq 2$ genau einen Wendepunkt.
@@ -57,7 +58,7 @@ Die äußere Funktion ist $x^4$, die innere Funktion ist $2x-1$.\\
 		\item $f$ ist im Intervall $[-2;1]$ streng monoton wachsend.
 		\item Es gilt $f(3)<f(1)$
 		\item $f''$ schneidet die $x$-Achse im Intervall $[1;3]$ zwei mal.
-	\end{itemize}
+	\end{enumerate}
 	\columnbreak
 	\centering
 	\includegraphics[width=0.7\linewidth]{Monotonieanalyse.png}
@@ -65,7 +66,17 @@ Die äußere Funktion ist $x^4$, die innere Funktion ist $2x-1$.\\
 	\pts{4}
 \end{multicols}
 \begin{lsg}{}
-
+	\begin{multicols}{4}
+		\begin{enumerate}
+			\item unentscheidbar
+			\item falsch
+			\item richtig
+			\item richtig
+			\item falsch
+			\item falsch
+			\item richtig
+		\end{enumerate}
+	\end{multicols}
 \end{lsg}
 
 \aufgabe{}
@@ -118,11 +129,11 @@ Von einem Senkrechten Kegel kennt man die Koordinaten der Spitze $S$, die Koordi
 \end{lsg}
 
 \aufgabe{Stochastik} (vgl. Abitur 2017)\\
-In einer Urne liegen drei rote, zwei grüne und eine blaue Kugel. Es werden so lange nacheinander einzelne Kugeln gezogen und zur Seite gelegt, bis mainn eine rote Kugel erhält. Bestimmen Sie die Wahrscheinlichkeit dafür, dass man höchstens drei Kugeln zieht. \pts{2}
+In einer Urne liegen drei rote, zwei grüne und eine blaue Kugel. Es werden so lange nacheinander einzelne Kugeln gezogen und zur Seite gelegt, bis man eine rote Kugel erhält. Bestimmen Sie die Wahrscheinlichkeit dafür, dass man höchstens drei Kugeln zieht. \pts{2}
 \begin{lsg}{}
 3 Rot, 2 Grün, 1 Blau. Insgesamt 6.
 
-$\frac 3 6 + \frac 3 6 \cdot\frac 3 5 + \frac 3 6 \cdot \frac 2 5 \cdot \frac 3 4 = \frac 1 2+\frac{9}{30} +\frac{18}{120}=\frac 1 2 + \frac{3}{10}+  \frac{3}{20}$
+$\frac 3 6 + \frac 3 6 \cdot\frac 3 5 + \frac 3 6 \cdot \frac 2 5 \cdot \frac 3 4 = \frac 1 2+\frac{9}{30} +\frac{18}{120}=\frac 1 2 + \frac{3}{10}+  \frac{3}{20} = \frac{19}{20}$
 \end{lsg}
 
 \vfill
@@ -149,13 +160,13 @@ Ihr Schaubild sei K. Das Schaubild der Funktion g mit $g(x)=-0.015x^2+0.15x+95$ 
 Eine Skisprunganlage besteht aus Sprungschanze und Aufsprunghang. Das Schaubild K beschreibt das Profil des Aufsprunghangs, die Kurve C die Flugbahn eines Skisprungers. Der Absprung erfolgt bei $x=0$. Alle Angaben in Metern.
 
 \begin{enumerate}
-  \item Bestimmen Sie die Koordinaten des Punktes, an dem der Springer auf dem Aufsprunghang aufsetzt. Wie groß ist die maximale vertikal gemessene Höhe des Springers über dem Hang?
-  \item Der Wendepunkt $W(71|40)$ von K entspricht dem kritischen Punkt des Aufsprunghangs. Mögliche Flugbahnen des Skispringers werden nun durch Schaubider der Funktionen $g_k=-0.015x^2+kx+95$ beschrieben. Welchen Wert darf der Parameter k höchstens annehmen, damit der Springer mit dieser Flugbahn nicht hinter dem kritrischen Punkt landet?
+  \item Bestimmen Sie die Koordinaten des Punktes, an dem der Springer auf dem Aufsprunghang aufsetzt. Wie groß ist die maximale vertikal gemessene Höhe des Springers über dem Hang? \pts{2}
+  \item Der Wendepunkt $W(71|40)$ von K entspricht dem kritischen Punkt des Aufsprunghangs. Mögliche Flugbahnen des Skispringers werden nun durch Schaubider der Funktionen $g_k=-0.015x^2+kx+95$ beschrieben. Welchen Wert darf der Parameter k höchstens annehmen, damit der Springer mit dieser Flugbahn nicht hinter dem kritrischen Punkt landet? \pts{3}
   \item Beim Umbau dieser Schanze soll das Profil des Aufsprunghangs verändert werden. Er soll nach dem Umbau durch die Funktion h mit
   \begin{equation*}
     h(x)=0.0001(1,25x^3-225x^2+2150x+900000) \quad\text{mit $0\leq x \leq 130$}
   \end{equation*}
-  beschrieben werden. Muss zur Realisierung des neuen Profils insgesamt Erde weggefahren oder angeliefert werden, wenn angenommen wird, dass der Hang überall gleich breit ist?
+  beschrieben werden. Muss zur Realisierung des neuen Profils insgesamt Erde weggefahren oder angeliefert werden, wenn angenommen wird, dass der Hang überall gleich breit ist? \pts{3}
 \end{enumerate}
 \begin{lsg}{}
 \begin{enumerate}
@@ -164,17 +175,20 @@ Eine Skisprunganlage besteht aus Sprungschanze und Aufsprunghang. Das Schaubild 
 	Für die maximale vertikale Höhe wird die Differenzfunktion aufgestellt: $d(x)\coloneqq g(x)-f(x)$. Nun ist der Hochpunkt von $d$ gesucht. Dieser befindet sich bei $x_{max}\approx26,08$. $d(x_{max})=12,64$.
 	\item $g_k$ muss $f$ spätestens im Punkt $W(71|40)$ schneiden, berechnen des $k$, sodass sich $g_k$ und $f$ in $W$ schneiden:
 	\begin{equation*}
-		g_k(71)&=f(71)
-		\rightsquigarrow k=
+		g_k(71)=f(71) \rightsquigarrow k\leq 0,29
 	\end{equation*}
-
-
+	\item Berechnung der Integrale der beiden Funktionen $f$ und $h$ im Intervall $[0;130]$:
+	\begin{align*}
+		\int\limits_0^{130} f(x)\d x &= 5978,15\\
+		\int\limits_0^{130} h(x)\d x &= 5964,56
+	\end{align*}
+	Das das neue Profil eine geringere Querschnittsfläche besitzt, muss Erde weggefahren werden.
 \end{enumerate}
 \end{lsg}
 
 
 \aufgabe{} (vgl. Abitur 2015)
-Gegeben sind ein Kreis mit Mittelpunkt $O(0|0)$ und die Funktion f mit $f(x)=\frac{4}{x^2+1}$. Bestimmen Sie die Anzahl der gemeinsamen Punkte des Kreises mit dem Graphen von f in Abhängigkeit vom Kreisradius.
+Gegeben sind ein Kreis mit Mittelpunkt $O(0|0)$ und die Funktion f mit $f(x)=\frac{4}{x^2+1}$. Bestimmen Sie die Anzahl der gemeinsamen Punkte des Kreises mit dem Graphen von f in Abhängigkeit vom Kreisradius. \pts{4}
 
 \begin{lsg}{}
 Für die Entfernung des Punktes $P(u|f(u))$ vom Ursprung gilt:
@@ -195,17 +209,38 @@ Der Kreis mit Radius 4 geht durch den Hochpunkt und hat damit 3 Schnittpunkte.
 \end{lsg}
 
 \aufgabe{}
+Für jedes $t\in \R$ ist die Funktion $g_t$ mit
+\begin{equation*}
+	g_t(x)=\e^{t-x}+x
+\end{equation*}
+gegeben.
+\begin{enumerate}
+	\item Der Graph jeder Funktion $g_t$ besitzt einen Tiefpunkt $T_t$. Bestimmen Sie die Ortskurve dieser Tiefpunkte. \pts{3}
+	\item Der Graph von $g_0$, die $y$-Achse und die erste Winkelhalbierede begrenzen eine nach rechts offene Fläche mit endlichem Inhalt. Berechnen sie den Inhalt dieser Fläche.
+
+	Die Gerade $x=a$ mit $a>0$ halbiert diese Fläche. Bestimmen Sie den Wert von $a$ exakt. \pts{5}
+\end{enumerate}
+\begin{lsg}{}
+	\begin{enumerate}
+		\item Koordinaten der Tiefpunkte: $T_t(t|1+t) \rightsquigarrow$ Gleichung der Ortskurve $y_t(x)=x+1$
+		\item $A(z)=\int\limits_0^z(g_0(x)-x)\d x=-\e^{-z}+1$
+
+		Dann ergibt sich für den Grenzwert $A=\lim\limits_{z\rightarrow \infty} (-\e^{-z}+1)=1$
+
+		Halbierung der Fläche, gesucht ist der Wert von $a$ so, dass $A(a)=\frac 1 2$.
+
+		\begin{align*}
+			-\e^{-a}+1 &= \frac 1 2\\
+			\e^{-a} &= \frac 1 2\\
+			-a &= \ln\left(\frac 1 2\right)\\
+			-a &= -\ln(2)\\
+			a = \ln(2)
+		\end{align*}
+	\end{enumerate}
+\end{lsg}
 
 
 
-\vfill
-\begin{align*}
-	&\Leftrightarrow\frac{a^5b^2-a^2b^6}{a^3b^2*(a+b^2)}\\
-	&\Leftrightarrow\frac{a^5b^2}{a^3b^2*(a+b^2)}-\frac{a^2b^6}{a^3b^2*(a+b^2)}\\
-	&\Leftrightarrow\frac{a^2}{a+b^2}-\frac{b^4}{a*(a+b^2)}\\
-	&\Leftrightarrow\frac{a^3}{a(a+b^2)}-\frac{b^4}{a*(a+b^2)}\\
-	&\Leftrightarrow\frac{a^3-b^4}{a*(a+b^2)}
-\end{align*}
 
 
 
@@ -221,7 +256,6 @@ Der Kreis mit Radius 4 geht durch den Hochpunkt und hat damit 3 Schnittpunkte.
 
 \section{Wahlteil Analytische Geometrie}
 
-\aufgabe{}
 Gegeben sind die Gerade $g$ durch die Punkte $A(0|-4|1)$ und $B(1|-2|0)$ sowie für jedes $a\in\R$ eine Ebene $E_a$ durch $x_1+(a-1)x_2+2ax_3=-2a+1$.
 \begin{enumerate}
   \item Berechnen Sie den Schnittpunkt von $g$ mit der Ebene $E_0$.\\
@@ -235,10 +269,28 @@ Gegeben sind die Gerade $g$ durch die Punkte $A(0|-4|1)$ und $B(1|-2|0)$ sowie f
   \item Welcher Punkt der $x_3$-Achse liegt in keiner Ebene $E_a$? \pts{2}
 \end{enumerate}
 \begin{lsg}{}
+	\begin{enumerate}
+		\item $S(3|2|-2)$
 
+		Wegen $\vec{OS}=\vec{OA}+3\vec{AB}$ liegt $S$ nicht zwischen $A$ und $B$.
+
+		$\alpha = 16,8^\circ$
+
+		\item $E_a || x_2$-Achse, wenn $\vec{n_{E_a}}*\vec{u_a}=0 \rightsquigarrow a=1$ Ebene $E_a$ ist parallel zur $x_2$-Achse
+
+		Es muss gelten: $\sin(45^\circ)=\frac{|u_1*n_a|}{|u_1|*|n_a|} \rightsquigarrow a_1=0, a_2=0,4$
+
+		\item Schnittgerade von $E_0$ und $E_1$ berechnen und zeigen, dass sie in allen Ebenen $E_a$ liegt.
+
+		\begin{equation*}
+			h: \vec x=\vektor{-1\\-2\\0}+t*\vektor{-2\\-2\\1}
+		\end{equation*}
+
+		\item $P(0|0|s)$ in $E_a$ einsetzen $\rightsquigarrow a=\frac{1}{2(s+1)} \rightsquigarrow s\not=-1$
+
+		$P(0|0|-1)$ liegt in keiner Ebene $E_a$
+	\end{enumerate}
 \end{lsg}
-
-\aufgabe{}
 
 
 
@@ -246,22 +298,77 @@ Gegeben sind die Gerade $g$ durch die Punkte $A(0|-4|1)$ und $B(1|-2|0)$ sowie f
 
 \hfill\rule{1.5cm}{0.4mm}
 
-\hfill (20 VP)\hspace{0.22cm}
+\hfill (10 VP)\hspace{0.22cm}
 
 
 \section{Wahlteil Stochastik}
+Die Tabelle zeigt die Häuftigkeitsverteilung von Rauchern und Nichtrauchern unter den Personen im Alter von 50 bis 55 Jahren in Deutschland.
 
-\aufgabe{}
+\vspace{2em}
+\begin{tabular}{ c|c }
+	Raucher & Nichtraucher\\
+	gelegentlich: 4,0\%, regelmäßig: 28,1\% & früher geraucht: 22,1\%,  nie geraucht: 45,8\%
+\end{tabular}
+\vspace{2em}
 
-\aufgabe{}
-\aufgabe{}
-\aufgabe{}
+\noindent
+Im Folgenden werden nur Personen der angegebenn Altersgruppe betrachtet.
+\begin{enumerate}
+	\item Zwanzig zufällig ausgewählte Personen gehen nacheinander zu einer Gesundheitsuntersuchung. Bestimmen Sie die Wahrscheinlichkeiten der folgenden Ereignisse:
+	\begin{itemize}
+		\item A: Genau acht Personen sind Raucher.
+		\item B: Mehr als acht Personen haben noch nie geraucht.
+		\item C: Genau acht Personen sind Raucher, wobei die letze Person ein Raucher ist.
+		\item D: Die ersten drei Personen sind Nichtraucher und von den übrigen rauchen mindestens sechs regelmäßig.
+	\end{itemize}
+	\item Acht Raucher beginnen ihre Entwöhnungskur. Sieben von ihnen sind regelmäßige Raucher. Die Erfolgschancen betragen unabhängig voneinander für regelmäßige Raucher 60\%, für Gelegenheitsraucher 80\%. Berechnen Sie die Wahrscheinlichkeit dafür, dass mindestens sieben Personen die Kur mit Erfolg beenden.
+	\item Eine Krankenkasse gewährt ihren Mitgliedern einen Bonus, wenn sie Nichtraucher sind. Wie groß müsste der Anteil der Nichtraucher unter ihren Mitgliedern im Alter von 50-55 Jahren mindestens sein, damit von 100 zufällig ausgewählten Mitgliedern dieser Altersgruppe mit einer Wahrscheinlichkeit von mindestens 90\% mindestens 70 den Bonus erhalten.
+\end{enumerate}
 
+
+\begin{lsg}{}
+	\newcommand{\bin}[1]{\ensuremath\mathrm{B}_{#1} \text{-verteilt}}
+	\begin{enumerate}
+		\item
+		\begin{itemize}
+			\item $X_1$ beschreibt die Anzahl der Raucher unter 20 Personen. $X_1$ kann als $\bin{20;0,321}$ angenommen werden.
+
+			$P(A)=P(X_1=8)=0,1364\approx 13,6\%$
+			\item $X_2$ beschreibt die Anzahl der Personen, die noch nie geraucht haben, unter 20 Personen an.
+
+			$X_2$ kann als $\bin{20;0,458}$ angenommen werden.
+
+			$P(B)=P(X_1>8)=0,6137\approx 61,4\%$
+			\item Der letzte ist Raucher, d.h. vorher 7 Raucher. $X_3$ beschreibt die Anzahl der Raucher unter 19 Personen.
+
+			$X_3$ kann als $\bin{19;0,321}$ angenommen werden.
+
+			$P(C)=P(X_1=7)*0321=0,0546\approx 5,5\%$
+			\item Die ersten drei Nichtraucher $X_4$ beschreibt die Anzahl der regelmäßigen Raucher unter 17 Personen.
+
+			$X_2$ kann als $\bin{20;0,458}$ angenommen werden.
+
+			$P(B)=0,679^3*P(X_1\geq6)=0,1053\approx 10,5\%$
+		\end{itemize}
+		\item Es gibt zwei Pfade: 6 regelmäßige Raucher und ein Gelegenheitsraucher bestehen die Kur oder 7 regelmäßige Raucher schaffen es.
+
+		$w=P(X=7)*0,8+P(X=7)*0,2+P(X=6)*0,8=0,1325\approx 13,3\%$
+		\item Der Anteil der Nichtraucher unter unter den Mitgliedern der Krankenkasse sei p.
+
+		$Y$ beschreibt die Anzahl der Nichtraucher unter 100 Mitgliedern. $Y$ kann als $\bin{100;p}$ gesehen werden.
+
+		Gesucht ist die kleinste positive Zahl $p$ mit $P(Y\geq 70)\geq 0,9$
+
+		Mit dem Tabellenmodus des CAS erhält man $p=0,751: P(Y\geq 70\approx 0,9004$ und $p=0,750: P(Y\geq 70\approx 0,8962$. Somit ist $p=0,751$ der gesuchte Wert.
+
+		Somit müsste der Nichtraucheranteil mindestens $75,1\%$ betragen.
+	\end{enumerate}
+\end{lsg}
 
 \vfill
 
 \hfill\rule{1.5cm}{0.4mm}
 
-\hfill (20 VP)\hspace{0.22cm}
+\hfill (10 VP)\hspace{0.22cm}
 
 \end{document}
