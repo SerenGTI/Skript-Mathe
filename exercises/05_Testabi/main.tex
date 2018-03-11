@@ -5,7 +5,7 @@
 \begin{document}
 
 \section{Pflichtteil}
-\aufgabe{Analysis} Bilden Sie die erste Ableitung der Funktion $f$ mit $f(x) = (2x^2+5)e^{-2x}$ \pts{2}
+\aufgabe{} Bilden Sie die erste Ableitung der Funktion $f$ mit $f(x) = (2x^2+5)e^{-2x}$ \pts{2}
 \begin{lsg}{}
 Es handelt sich um ein Produkt, Anwenden der Produktregel:\\
 $u(x) = 2x^2+5 \quad u'(x)=4x$\\
@@ -13,7 +13,7 @@ $v(x) = e^{-2x} \quad v'(x)=(-2)e^{-2x}$\\
 $\Rightarrow f'(x)=u'(x)v(x)+u(x)v'(x) = 4x\cdot e^{-2x}+(2x^2+5)\cdot(-2e^{-2x})$
 \end{lsg}
 
-\aufgabe{Analysis} Berechnen Sie das Integral \pts{2}\\
+\aufgabe{} Berechnen Sie das Integral \pts{2}\\
 $\int\limits_0^1(2x-1)^4 \intd x$
 \begin{lsg}{}
 Es handelt sich um eine Verkettung.
@@ -32,7 +32,7 @@ Die äußere Funktion ist $x^4$, die innere Funktion ist $2x-1$.\\
 \end{itemize}
 \end{lsg}
 
-\aufgabe{Analysis}Lösen Sie die Gleichung $\e^x-\frac{3}{\e^x}+2=0$ \pts{3}\\
+\aufgabe{}Lösen Sie die Gleichung $\e^x-\frac{3}{\e^x}+2=0$ \pts{3}\\
 \begin{lsg}{}
 \begin{alignat*}{2}
     &&\e^x-\frac{3}{\e^x}+2 &= 0\\
@@ -46,18 +46,29 @@ Die äußere Funktion ist $x^4$, die innere Funktion ist $2x-1$.\\
 \end{alignat*}
 \end{lsg}
 
-\aufgabe{Graphanalyse} (vgl. Abitur 2007)\\
-Gegeben ist das Schaubild der Ableitung $f'$ der Funktion $f$. \pts{4}
-\begin{enumerate}
-  \item Welche Aussagen über die Funktion $f$ ergeben sich daraus im Hinblick auf Monotonie, Extremstellen, Wendestellen? Begründen Sie ihre Aussagen.
+\aufgabe{}
+\begin{multicols}{2}
+	Die Abbildung zeigt das Schaubild der Ableitung $f'$ einer Funktion $f$. Skizzieren Sie grob den Verlauf von $f''$ in die Abbildung und geben Sie für jeden der folgenden Sätze an ob er richtig, falsch oder unentscheidbar ist:
+	\begin{itemize}
+		\item $f$ schneidet die $y$-Achse bei $(0|1)$.
+		\item Das Schaubild von $f$ hat bei $x=-1$ einen Tiefpunkt.
+		\item Das Schaubild von $f$ hat für $-2\leq x \leq 2$ genau einen Wendepunkt.
+		\item Das Schaubild von $f$ verläuft an der Stelle $1$ steiler als die erste Winkelhalbierede.
+		\item $f$ ist im Intervall $[-2;1]$ streng monoton wachsend.
+		\item Es gilt $f(3)<f(1)$
+		\item $f''$ schneidet die $x$-Achse im Intervall $[1;3]$ zwei mal.
+	\end{itemize}
+	\columnbreak
+	\centering
+	\includegraphics[width=0.7\linewidth]{Monotonieanalyse.png}
 
-  \item Es gilt $f(0)=2$. Skizzieren Sie das Schaubild von $f$.
-\end{enumerate}
-
+	\pts{4}
+\end{multicols}
 \begin{lsg}{}
+
 \end{lsg}
 
-\aufgabe{Analytische Geometrie}
+\aufgabe{}
 Gegeben sei die Gerade $g: \vec x=\left(\begin{array}{c} 3 \\ -3 \\ 1 \end{array}\right) + t\cdot \left( \begin{array}{c} 1 \\ 2 \\ 0 \end{array} \right)$ und die Ebene $E = 2x_1-x_2+2x_3=2$. \pts{4}
 \begin{enumerate}
   \item Zeigen Sie, dass $E$ und $g$ parallel sind, und berechnen Sie den Abstand von $g$ und $E$.
@@ -120,6 +131,12 @@ $\frac 3 6 + \frac 3 6 \cdot\frac 3 5 + \frac 3 6 \cdot \frac 2 5 \cdot \frac 3 
 
 \hfill (20 VP)\hspace{0.22cm}
 
+
+
+
+
+
+
 \section{Wahlteil Analysis}
 
 \aufgabe{} (vgl. Abitur 2006)\\
@@ -138,11 +155,23 @@ Eine Skisprunganlage besteht aus Sprungschanze und Aufsprunghang. Das Schaubild 
   \begin{equation*}
     h(x)=0.0001(1,25x^3-225x^2+2150x+900000) \quad\text{mit $0\leq x \leq 130$}
   \end{equation*}
-  beschrieben werden. Muss zur Realisierung des neuen Profils insgesamt Erde weggefahren oder angeliefert werden, wenn angenommen wird, dass der Hang überall gleich breit ist.
+  beschrieben werden. Muss zur Realisierung des neuen Profils insgesamt Erde weggefahren oder angeliefert werden, wenn angenommen wird, dass der Hang überall gleich breit ist?
 \end{enumerate}
 \begin{lsg}{}
-selbst.
+\begin{enumerate}
+	\item Gleichsetzen der Funktionen $f$ und $g$ mit $0\leq x \leq 130$ ergibt $S(60|50)$ als Schnittpunkt.
+
+	Für die maximale vertikale Höhe wird die Differenzfunktion aufgestellt: $d(x)\coloneqq g(x)-f(x)$. Nun ist der Hochpunkt von $d$ gesucht. Dieser befindet sich bei $x_{max}\approx26,08$. $d(x_{max})=12,64$.
+	\item $g_k$ muss $f$ spätestens im Punkt $W(71|40)$ schneiden, berechnen des $k$, sodass sich $g_k$ und $f$ in $W$ schneiden:
+	\begin{equation*}
+		g_k(71)&=f(71)
+		\rightsquigarrow k=
+	\end{equation*}
+
+
+\end{enumerate}
 \end{lsg}
+
 
 \aufgabe{} (vgl. Abitur 2015)
 Gegeben sind ein Kreis mit Mittelpunkt $O(0|0)$ und die Funktion f mit $f(x)=\frac{4}{x^2+1}$. Bestimmen Sie die Anzahl der gemeinsamen Punkte des Kreises mit dem Graphen von f in Abhängigkeit vom Kreisradius.
@@ -167,6 +196,29 @@ Der Kreis mit Radius 4 geht durch den Hochpunkt und hat damit 3 Schnittpunkte.
 
 \aufgabe{}
 
+
+
+\vfill
+\begin{align*}
+	&\Leftrightarrow\frac{a^5b^2-a^2b^6}{a^3b^2*(a+b^2)}\\
+	&\Leftrightarrow\frac{a^5b^2}{a^3b^2*(a+b^2)}-\frac{a^2b^6}{a^3b^2*(a+b^2)}\\
+	&\Leftrightarrow\frac{a^2}{a+b^2}-\frac{b^4}{a*(a+b^2)}\\
+	&\Leftrightarrow\frac{a^3}{a(a+b^2)}-\frac{b^4}{a*(a+b^2)}\\
+	&\Leftrightarrow\frac{a^3-b^4}{a*(a+b^2)}
+\end{align*}
+
+
+
+\vfill
+
+\hfill\rule{1.5cm}{0.4mm}
+
+\hfill (20 VP)\hspace{0.22cm}
+
+
+
+
+
 \section{Wahlteil Analytische Geometrie}
 
 \aufgabe{}
@@ -182,8 +234,20 @@ Gegeben sind die Gerade $g$ durch die Punkte $A(0|-4|1)$ und $B(1|-2|0)$ sowie f
 
   \item Welcher Punkt der $x_3$-Achse liegt in keiner Ebene $E_a$? \pts{2}
 \end{enumerate}
+\begin{lsg}{}
+
+\end{lsg}
 
 \aufgabe{}
+
+
+
+\vfill
+
+\hfill\rule{1.5cm}{0.4mm}
+
+\hfill (20 VP)\hspace{0.22cm}
+
 
 \section{Wahlteil Stochastik}
 
@@ -192,5 +256,12 @@ Gegeben sind die Gerade $g$ durch die Punkte $A(0|-4|1)$ und $B(1|-2|0)$ sowie f
 \aufgabe{}
 \aufgabe{}
 \aufgabe{}
+
+
+\vfill
+
+\hfill\rule{1.5cm}{0.4mm}
+
+\hfill (20 VP)\hspace{0.22cm}
 
 \end{document}

@@ -4,163 +4,6 @@
 
 \begin{document}
 
-\aufgabe{Lineare Gleichungen:} Löse die Gleichungen für $x\in \R$
-\begin{multicols}{3}
-  \begin{enumerate}
-    \item $3x + 5 = 23$
-    \item $8x - 12 = 28$
-    \item $7x + 3 = 5x + 12$
-    \item $4(9x - 11) - 12(3x - 4) = 4$
-    \item $\frac{x+2}{3} + \frac{x-1}{15} = \frac{2x+3}{5}$
-  \end{enumerate}
-\end{multicols}
-
-\begin{lsg}{}
-  \begin{multicols}{2}
-    \begin{enumerate}
-      \item $3x = 18 \Rightarrow x = 6$
-      \item $8x = 40 \Rightarrow x = 5$
-      \item $2x = 9 \Rightarrow x = 4,5$
-      \item Ausmultiplizieren, die Gleichung gilt für alle $x$.
-      \item \begin{align*}
-        \frac{5x+10}{15} + \frac{x-1}{15} &= \frac{2x+3}{5}\\
-        \frac{6x+9}{15} &= \frac{2x+3}{5}\\
-        \frac{2x+3}{5} &= \frac{2x+3}{5}\\
-        \rightsquigarrow \text{ gilt für alle }x&
-      \end{align*}
-    \end{enumerate}
-  \end{multicols}
-\end{lsg}
-
-
-
-
-
-\aufgabe{Mitternachtsformel:} Löse die Gleichungen für $x\in \R$ mithilfe der Mitternachtsformel
-\begin{multicols}{3}
-  \begin{enumerate}
-    \item $x^2 - 10x + 24 = 0$
-    \item $x^2 + 6x - 16 = 0$
-    \item $x^2 - 9x = 22$
-    \item $x^2 = 3x + 18$
-    \item $\frac{x(x-10)}{2} = 12$
-  \end{enumerate}
-\end{multicols}
-
-\begin{lsg}{}
-  \begin{equation*}
-    \text{für das Polynom $ax^2+bx+c=0$ gilt für die Nullstellen: } x_{1,2}=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
-  \end{equation*}
-    \begin{enumerate}
-      \item \begin{align*}
-      x_{1,2}&=\frac{10\pm\sqrt{(-10)^2-4*1*24}}{2}\\
-      &=\frac{10\pm\sqrt{100-96}}{2}\\
-      &=\frac{10\pm2}{2}\\
-      \rightarrow x_1&=6\\
-      \rightarrow x_2&=4\\
-      \end{align*}
-      \item \begin{align*}
-      x_{1,2}&=\frac{-6\pm\sqrt{6^2-4*1*(-16)}}{2}\\
-      &=\frac{-6\pm\sqrt{36+64}}{2}\\
-      &=\frac{-6\pm10}{2}\\
-      \rightarrow x_1&=4\\
-      \rightarrow x_2&=-16\\
-      \end{align*}
-      \item
-      \begin{align*}
-        &x^2 - 9x = 22 \Leftrightarrow x^2 - 9x - 22 = 0\\
-        x_{1,2}&=\frac{9\pm\sqrt{(-9)^2-4*1*(-22)}}{2}\\
-        &=\frac{9\pm\sqrt{81+88}}{2}\\
-        &=\frac{9\pm\sqrt{169}}{2}\\
-        &=\frac{9\pm13}{2}\\
-        \rightarrow x_1&=6\\
-        \rightarrow x_2&=-2\\
-      \end{align*}
-      \item
-      \begin{align*}
-        &x^2 = 3x + 18 \Leftrightarrow x^2 - 3x - 18 = 0\\
-        x_{1,2}&=\frac{3\pm\sqrt{(-3)^2-4*1*(-18)}}{2}\\
-        &=\frac{3\pm\sqrt{9+72}}{2}\\
-        &=\frac{3\pm\sqrt{91}}{2}\\
-        &=\frac{3\pm9}{2}\\
-        \rightarrow x_1&=6\\
-        \rightarrow x_2&=-3\\
-      \end{align*}
-      \item
-      \begin{align*}
-        &\frac{x(x-10)}{2} = 12 \Leftrightarrow x(x-10)=24 \Leftrightarrow x^2 - 10x - 24 = 0\\
-        x_{1,2}&=\frac{10\pm\sqrt{(-10)^2-4*1*(-24)}}{2}\\
-        &=\frac{10\pm\sqrt{100+96}}{2}\\
-        &=\frac{10\pm\sqrt{196}}{2}\\
-        &=\frac{10\pm14}{2}\\
-        \rightarrow x_1&=12\\
-        \rightarrow x_2&=-2\\
-      \end{align*}
-    \end{enumerate}
-\end{lsg}
-
-
-
-
-\aufgabe{Substitution:} Löse die Gleichungen - ohne CAS
-\begin{multicols}{3}
-  \begin{enumerate}
-    \item $2x^4 - 5x^2 + 2 = 0$
-    \item $x^4 - 4x^2 + 3 = 0$
-    \item $\sin(3x) = 1 (0\leq x \leq 2\pi)$
-    \item $(\sin(2x))^2 + 2\sin(2x) = -1 (0\leq x \leq 2\pi)$
-    \item $e^{2x} - e^x = 0$
-		\item $\left(\cos(x)\right)^2-3\cos(x)+2=0 (0\leq x \leq 2\pi)$
-  \end{enumerate}
-\end{multicols}
-
-\begin{lsg}{}
-	\begin{enumerate}
-    \item Mit Substitution $x^2=u$: $u_1=\frac 1 2, u_2=2$.
-
-		Resubstitution: \\$u_1=\frac 1 2 = x^2 \rightsquigarrow x=\frac 1{\sqrt 2},  u_2=2 = x^2 \rightsquigarrow x=\sqrt 2$
-    \item Mit Substitution $x^2=u$: $u_1=1, u_2=3$.
-
-		Resubstitution: $x_1=1, x_2=\sqrt 3$
-    \item $\sin(3x) = 1$
-		Mit Substitution $u=3x$: $\sin(u)=1 \rightsquigarrow u=k*2\pi+\frac {\pi} 2 \quad k\in\Z$
-
-		Resubstitution: $k*2\pi+\frac {\pi} 2 = 3x \rightsquigarrow x=\frac {k*2\pi} 3+\frac {\pi} 6\quad x_1=\frac \pi 6, x_2=\frac {5\pi} 6, x_3=\frac{9\pi} 6$
-    \item Mit Substitution $u=\sin(2x)$: $u^2 + 2u + 1 = 0$
-
-		Mitternachtsformel: $u_1=-1$
-
-		Resubstitution: $u_1=-1=\sin(2x)$
-
-		mit Substitution $v=2x$ folgt $-1=\sin(v) \rightarrow v=k*2\pi+\frac {3\pi} 2 \quad k\in\Z$
-
-		Resubstitution: $v=k*2\pi+\frac {3\pi} 2=2x \rightsquigarrow x=k*\pi+\frac {3\pi} 4 \quad x_1=\frac {3\pi} 4, x_2=\frac {7\pi} 4$
-    \item Siehe oben, $x=0$
-		\item Siehe oben, $x_1=0,x_2=2\pi$
-  \end{enumerate}
-\end{lsg}
-
-
-
-
-\aufgabe{Gleichungen: } Löse die Gleichungen für $x\in \R$ mit dem Satz vom Nullprodukt
-\begin{multicols}{3}
-  \begin{enumerate}
-		\item $\sin(x)*(\cos(x)-2)=0$\\ $\text{ mit }(0\leq x<2\pi)$\columnbreak
-		\item $\sin^2(x)-2\sin(x) = 0$\\ $\text{ mit }(0\leq x<2\pi)$\columnbreak
-    \item $x^3 - 4x = 0$
-    \item $3x^3-6x^2=0$
-  \end{enumerate}
-\end{multicols}
-
-\begin{lsg}{}
-  \begin{enumerate}
-		\item $\cos(x)-2\not = 0$ für alle $x\in \R \quad\rightsquigarrow \sin(x)=0 \Leftrightarrow x=k*\pi, k\in\Z$
-    \item $x(x^2-4) = 0 \rightsquigarrow x_1=0, x_2=2, x_3=-2$
-    \item $\sin(x)*(\sin(x)-2) = 0 \rightsquigarrow x_1=0, x_2=\pi$
-    \item $x^2(3x-6)=0 \rightsquigarrow x_1=0, x_2=2$
-  \end{enumerate}
-\end{lsg}
 
 
 
@@ -193,43 +36,28 @@
 
 
 
-
-
-\aufgabe{Ableitungen: } Berechne jeweils die erste Ableitung der Funktionen
-\begin{multicols}{2}
+\aufgabe{Monotonieuntersuchung: }
+\begin{enumerate}
+	\item Definiere, wann eine Funktion in einem Intervall als streng monoton steigend bezeichnet wird.
+	\item Untersuche die gegebenen Funktionen auf Monotonie und gib Art und Lage der Extrempunkte an:
 	\begin{enumerate}
-		\item $f(x)=3x^4+2x^3+x^2-10$
-	  \item $g(x)=x^2\e^x$
-		\item $h(x)=x^x$
-	  \item $j(x)=\ln(\e^{3x}\sin(2x))$
+		\item $f(x)=x^2-3x+5$
+		\item
 	\end{enumerate}
-\end{multicols}
-
+\end{enumerate}
 \begin{lsg}{}
-	\begin{multicols}{2}
+	\begin{enumerate}
+		\item Eine Funktion ist über dem Intervall $[x_0;x_1]$ streng monoton steigend, wenn gilt: $f'(x)>0$ für alle $x_0\leq x \leq x_1$
+		\item
 		\begin{enumerate}
-			\item Summenregel: \begin{align*}
-			f'(x)=12x^3+6x^2+2x
-			\end{align*}
-			\item Produktregel: \begin{align*}
-			g'(x)=2x\e^x+x^2\e^x
-			\end{align*}
-			\item Umformung auf handlicheres Format: \begin{align*}
-		    h(x)&= x^x= \e^{x\ln(x)}\\
-		    \intertext{Ketten- und Produktregel: }
-				h'(x)&=\e^{x\ln(x)}* \left(\ln(x)+x*\frac{1}{x}\right) \\
-				&= \e^{x\ln(x)}*\ln(x)+1
-		  \end{align*}
-		  \item Umformung auf handlicheres Format: \begin{align*}
-		    j(x)&= \ln(\e^{3x}\sin(2x))\\
-				&= \ln(\e^{3x}) + \ln(\sin(2x)) \\
-				&= 3x + \ln(\sin(2x))\\
-		    j'(x)&=3+\frac{1}{\sin(2x)} * 2*\cos(2x) \\
-				&= \frac{2\cos(2x)}{\sin(2x)}+3
-		  \end{align*}
+			\item
 		\end{enumerate}
-	\end{multicols}
+	\end{enumerate}
 \end{lsg}
+
+
+
+
 
 
 
@@ -266,63 +94,14 @@
 \end{lsg}
 
 
-\aufgabe{Gleichungen lösen}
-Forme die gegebenen Gleichungen jeweils nach $x$ um!
-\begin{multicols}{2}
-	\begin{enumerate}
-		\item $(x-5)^2=(x-3)(x+3)$
-		\item $17-4x=1-12x$
-		\item $10x^2+5x+10 = 0$
-		\item $x=2\cdot 5-((x^2)+10)^2$
-	\end{enumerate}
-\end{multicols}
 
-\begin{lsg}{}
-	\begin{enumerate}
-		\item \begin{align*}
-			(x-5)^2 &= (x-3)(x+3)\\
-			x^2-10x+25 &= x^2+9\\
-			10x &= 16\\
-			x &= 1,6
-		\end{align*}
-		\item \begin{align*}
-			17-4x &= 1-12x\\
-			16 &= 8x\\
-			x &= 2
-		\end{align*}
-		\item $x^2-10x+25=x^2+3x-3x-9 \Leftrightarrow -10x=-34 \Leftrightarrow x=3,4$
-		\item $8x=-16 \Leftrightarrow x=-2$
-	\end{enumerate}
-\end{lsg}
-
-
-\aufgabe{Ableiten: } Leite die gegebenen Funktionen ab
-\begin{multicols}{3}
-  \begin{enumerate}
-    \item $f(x) = 2(3x^2+x)^3$
-    \item $g(x) = \frac{4}{(2x+1)^2}$
-    \item $h(x) = 2x\sqrt{x^2+1}$
-    \item $j(x) = \sqrt{x}\sin(x^2)$
-    \item $k(x) = \sqrt{\cos(x)\cdot\sqrt{x+1}}$
-    \item $l(x) = \frac{2x+3}{\sin(3x)}$
-  \end{enumerate}
-\end{multicols}
-\begin{lsg}{}
-	\begin{enumerate}
-    \item $f'(x) = 6(3x^2+x)^2*(6x+1)$
-    \item $g'(x) = -16(2x+1)^{-3}$
-    \item $h'(x) = 2\sqrt{x^2+1}+\frac{2x^2}{\sqrt{x^2+1}}$
-    \item $j'(x) = 2x^{\frac 3 2}*\cos(x^2)+\frac{\sin(x^2)}{2\sqrt x}$
-    \item $k'(x) = \frac{\cos(x)-2(x+1)*\sin(x)}{4\sqrt{x+1}*\sqrt{\sqrt{x+1}*\cos(x)}}$
-    \item $l'(x) = \frac{-6\left(3x\cos(3x)-\sin(3x)\right)}{\left(\sin(3x)\right)^2}$
-  \end{enumerate}
-\end{lsg}
 
 
 
 \aufgabe{Anwedungsaufgaben: }
   \begin{enumerate}
     \item Gegeben sei die Funktion $f(x) = \frac{1-4x^2}{x^2}$. Ihr Schaubild ist $K$, wo schneidet die Tangente an $K$ in $P(1|f(1))$ die $x$-Achse?
+		\item
   \end{enumerate}
 	\begin{lsg}{}
 		\begin{enumerate}
