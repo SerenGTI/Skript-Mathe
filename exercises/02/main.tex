@@ -9,5 +9,90 @@
 \end{inhalt}
 
 
+\aufgabe{Wachstum}
+\begin{enumerate}
+	\item Bakterien vermehren sich durch Teilung, wobei sich eine Bakterienzelle durchschnittlich alle 10 Minuten teilt. Zum Zeitpunkt $t=0$ sei genau eine Bakterienzelle vorhanden.
+	\begin{itemize}
+		\item Wie viele Bakterien sind dann nach 1 Stunde, 2 Stunden bzw. 6 Stunden vorhanden?
+		\item Finde eine Formel für die Anzahl $B(t)$ der Bakterien nach der Zeit $t$.
+		\item Eine Bakterienzelle hat ein Volumen von ca. $2\times10^{-18}\mathrm{m}^3$ . Wie lange dauert es, bis die Bakterienkultur ein Volumen von $1\mathrm{m}^3$ bzw. $1\mathrm{km}^3$ einnimmt? Ist das Ergebnis plausibel?
+	\end{itemize}
+	\item	Angenommen, die Weltbevölkerung vermehrt sich nach der Formel $M(t)=M_0*\e^{\delta t}$.
+
+	1960 gab es ca. 3 Milliarden Menschen, 1995 etwa 5,6 Milliarden.
+	\begin{itemize}
+		\item Bestimme die Konstante $\delta$.
+		\item Wieviel Prozent beträgt das jährliche Wachstum der Weltbevölkerung?
+		\item Wann wird die Erde 15 Mrd. Einwohner haben, wenn die Bevölkerung im selben Tempo weiterwächst?
+	\end{itemize}
+	\item Eine Tasse kochendheißer Kaffee (100$^\circ$C) kühlt bei Zimmertemperatur (20$^\circ$C) in 10 Minuten auf 30$^\circ$C ab.
+	\begin{itemize}
+		\item Geben Sie eine Funktionsgleichung für die Temperatur des Kaffees an.
+		\item Frau M mischt den Kaffee mit der gleichen Menge Milch aus dem Kühlschrank (4$^\circ$C). Sie hat zwei Möglichkeiten: die Milch sofort dazugeben, danach 3 Minuten warten oder die Milch erst nach 3 Minuten dazugeben.\\
+Welche Temperatur hat der Milchkaffee in beiden Fällen?
+\textit{(Hinweis: Die Temperatur der Mischung ist der Mittelwert der einzelnen Temperaturen: $T=\frac{(T_1+T_2)}{2}$.)}
+	\end{itemize}
+\end{enumerate}
+
+\begin{lsg}{}
+	\begin{enumerate}
+		\item
+		\begin{itemize}
+			\item Exponentielles Wachstum, allgemeine Form: $B(t)=c*a^x=\e^{\ln(a)x}$%
+			\begin{align*}
+				c&=1, \text{ da $B(0)=1$}\\
+				\intertext{Es soll gelten:}
+				B(10)&=2=a^{10}\\
+				a&=\sqrt[10]{2}\\
+				a&\approx 1,072
+				\intertext{Bakterien nach einer, zwei und sechs Studen:}
+				B(60)&=1,072^{60}\approx 64\\
+				B(120)&=1,072^{120}\approx 4201\\
+				B(360)&=1,072^{360}\approx 74\times 10^{9}
+			\end{align*}
+			\item $B(t)=1*1,072^t=\e^{\ln(1,072)t}$
+			\item Es soll gelten:
+			\begin{align*}
+				2\times10^{-18}\mathrm{m}^3 * B(n) &= 1\mathrm{m}^3 & 2\times10^{-18}\mathrm{m}^3 * B(n) &= 1000000000\mathrm{m}^3\\
+				\rightsquigarrow t&\approx 586,16 \hat=9,77\mathrm h & \rightsquigarrow t&\approx 884,23\hat=14,74\mathrm h
+			\end{align*}
+		\end{itemize}
+		\item
+		\begin{itemize}
+			\item \begin{align*}
+				M(t)&=M_0*\e^{\delta t}\\
+				\intertext{$t=0$: 1960}
+				M(0)&=M_0=3\times10^9\\
+				\intertext{$t=1995-1960=35$}
+				M(35)&=3\times10^{9}*\e^{\delta 35}=5,6\times 10^9\\
+				\delta&=0,017833
+			\end{align*}
+			\item Jährliches Wachstum: $\e^\delta$
+			\begin{align*}
+				\e^\delta = \e^{0,017833}=1,01799\ \hat=\ 101,8\%
+			\end{align*}
+			\item \begin{align*}
+				M(t)&=3\times10^{9}*\e^{0,017833*t}=15\times 10^9\\
+				\rightsquigarrow t&= 90\ \hat=\ 1960+90=2050
+			\end{align*}
+		\end{itemize}
+
+
+		\item\begin{itemize}
+			\item Beschränktes Wachstum, allgemein: $T(t)=S-(S-T(0))*\e^{-k*t}$
+			\begin{align*}
+				&S=20, S-T(0)=20-100=-80\\
+				\Rightarrow T(t)&=20+80*\e^{-k*t}\\
+				\intertext{Berechnung von $k$ durch einsetzen der bekannten Werte:}
+				T(10)&=30=20+80*\e^{-k*10} \quad| \text{ Auflösen nach k}\\
+				\rightsquigarrow k&=\frac{3*\ln(2)}{10}\\
+				\rightsquigarrow T(t)&=20+80*\e^{-\frac{3\ln(2)}{10}*t}
+			\end{align*}
+			\item Erst abkühlen, dann Milch dazu: $33,44^\circ\mathrm{C}$
+			Variante 2: $37,14^\circ\mathrm{C}$
+		\end{itemize}
+	\end{enumerate}
+\end{lsg}
+
 
 \end{document}
