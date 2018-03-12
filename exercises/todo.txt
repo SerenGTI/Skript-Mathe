@@ -1,10 +1,9 @@
 0
-Monotonie 1
 Trigonometrie erweitern, Funktionsterm anhand graph angeben
 
 
 1
-Extrempunkte 2
+Extrempunkte 1
 Exponentialfunktion 1
 Funktionenschar fertig machen joshua
 Stammfunktion Berechnen 1
@@ -15,7 +14,6 @@ Gebrochenrationale Funktionen, Asymptoten bestimmen
 
 
 2
-Wachstum
 LGS 2
 Geraden mit Punkten aufstellen
 Ebenen aufstellen (orthogonale und so) fertig machen

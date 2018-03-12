@@ -6,34 +6,6 @@
 
 
 
-
-
-
-
-
-
-
-\aufgabe{Monotonieuntersuchung: }
-\begin{enumerate}
-	\item Definiere, wann eine Funktion in einem Intervall als streng monoton steigend bezeichnet wird.
-	\item Untersuche die gegebenen Funktionen auf Monotonie und gib Art und Lage der Extrempunkte an:
-	\begin{enumerate}
-		\item $f(x)=x^2-3x+5$
-		\item
-	\end{enumerate}
-\end{enumerate}
-\begin{lsg}{}
-	\begin{enumerate}
-		\item Eine Funktion ist über dem Intervall $[x_0;x_1]$ streng monoton steigend, wenn gilt: $f'(x)>0$ für alle $x_0\leq x \leq x_1$
-		\item
-		\begin{enumerate}
-			\item
-		\end{enumerate}
-	\end{enumerate}
-\end{lsg}
-
-
-
 \aufgabe{Ebenengleichungen: }
 Bestimme die Ebene in der angegebenen Darstellungsform:
 \begin{enumerate}
@@ -48,6 +20,8 @@ Gib eine Gleichung der Schnittgeraden der Ebenen $E: x_1-x_2+2x_3=7$ und $F:6x_1
 \aufgabe{Abstandsberechnungen Teil 1: }
 Berechne den Abstand des Punktes $R(6|9|4)$ von der Ebene $E: \left[ \vec x -  \vektor{7 \\ 5\\ 2}\right]*\vektor{2\\ 2 \\1}=0$
 
+
+
 \aufgabe{Abstands- und Lageberechnungen: }
 Gegeben sind die Ebene \\$E: \left[ \vec x -  \vektor{-1 \\ 4\\ -3}\right]*\vektor{8\\ 1 \\-4}=0$ und die Gerade $g: \vec x=\vektor{7\\5\\-7}+t*\vektor{1\\-4\\1}$.
 \begin{enumerate}
@@ -55,14 +29,18 @@ Gegeben sind die Ebene \\$E: \left[ \vec x -  \vektor{-1 \\ 4\\ -3}\right]*\vekt
 	\item Bestimmen Sie den Abstand von $E$ und $g$.
 \end{enumerate}
 
-
-
-
-
-
-
-
-
+\begin{lsg}{}
+	\begin{enumerate}
+		\item Dafür müssen der Normalenvektor von $E$ und der Richtungsvektor von $g$ orthogonal sein.
+		\begin{equation*}
+			\vektor{8\\ 1 \\-4}*\vektor{1\\-4\\1}=8-4-4=0
+		\end{equation*}
+		\item Aufstellen einer Hilfsgeraden:
+		\begin{align*}
+			h: \vec x=\vektor{7\\5\\-7}+r*\vektor{8\\ 1 \\-4}
+		\end{align*}
+	\end{enumerate}
+\end{lsg}
 
 
 
@@ -95,6 +73,28 @@ Gegeben sind die Ebene \\$E: \left[ \vec x -  \vektor{-1 \\ 4\\ -3}\right]*\vekt
 		\item	Bestimmen Sie $\int\limits^\infty_0 x^a\d x$ in Abhängigkeit von $a$ mit $a < -1$.
 		\item Berechnen Sie $\lim\limits_{x\rightarrow -\infty} x^5\e^x$
 	\end{enumerate}
+	\begin{lsg}{}
+		\begin{enumerate}
+			\item \begin{align*}
+				&\int\limits^k_0 e^{-x}\d x\\
+				&=\left[-\e^{-x}\right]_0^k\\
+				&=(-\e^{-k})-(-1)\\
+				&=-\e^{-k}+1\\
+				&\lim\limits_{k\rightarrow \infty}-\e^{-k}+1\\
+				&=0+1=1
+			\end{align*}
+			\item \begin{align*}
+				&\int\limits^\infty_0 x^a\d x\\
+				&=\left[\frac1 a x^{a+1}\right]_0^k\\
+				&=\left(\frac1 k k^{a+1}\right)-\left(\frac1 a 0^{a+1}\right)\\
+				&=\left(\frac1 k k^{a+1}\right)\\
+				&\lim\limits_{k\rightarrow \infty}\frac1 k k^{a+1}\\
+				&=0\quad \text{da $k^{a+1}<1$, denn $a<-1$}
+			\end{align*}
+		\end{enumerate}
+	\end{lsg}
+
+
 
 	\aufgabe{Gebrochenrationale Funktionen}
 	\begin{enumerate}
@@ -102,38 +102,7 @@ Gegeben sind die Ebene \\$E: \left[ \vec x -  \vektor{-1 \\ 4\\ -3}\right]*\vekt
 		\item	Geben Sie die Funktionsgleichungen aller waagerechter oder senkrechter Asymptoten von $f(x)=\frac{4x^2+3}{x^2+5x}$
 	\end{enumerate}
 
-	\aufgabe{Wachstum}
-	\begin{enumerate}
-		\item Bakterien vermehren sich durch Teilung, wobei sich eine Bakterienzelle durchschnittlich alle 10 Minuten teilt. Zum Zeitpunkt $t=0$ sei genau eine Bakterienzelle vorhanden.
-		\begin{itemize}
-			\item Wie viele Bakterien sind dann nach 1 Stunde, 2 Stunden, 6 Stunden, 12 Stunde bzw. 24 Stunden vorhanden?
-			\item Finde eine Formel für die Anzahl $B(t)$ der Bakterien nach der Zeit $t$.
-			\item Eine Bakterienzelle hat ein Volumen von ca. $2\times10^{-18}\mathrm{m}^3$ . Wie lange dauert es, bis die Bakterienkultur ein Volumen von $1\mathrm{m}^3$ bzw. $1\mathrm{km}^3$ einnimmt? Ist das Ergebnis plausibel?
-		\end{itemize}
-		\item	Angenommen, die Weltbevölkerung vermehrt sich nach der Formel $M(t)=M_0*\e^{\delta t}$. 1960 gab es ca. 3 Milliarden Menschen, 1995 etwa 5,6 Milliarden.
-		\begin{itemize}
-			\item Bestimme die Konstante $\delta$.
-			\item Wieviel Prozent beträgt das jährliche Wachstum der Weltbevölkerung?
-			\item Wann wird die Erde 15 Mrd. Einwohner haben, wenn die Bevölkerung im selben Tempo weiterwächst?
-		\end{itemize}
-		\item Eine Tasse kochendheißer Kaffee (100$^\circ$C) kühlt bei Zimmertemperatur (20$^\circ$C) in 10 Minuten auf 30$^\circ$C ab.
-		\begin{itemize}
-			\item Geben Sie eine Funktionsgleichung für die Temperatur des Kafffees an.
-			\item Frau M mischt den Kaffee mit der gleichen Menge Milch aus dem Kühlschrank (4$^\circ$C). Sie hat zwei Möglichkeiten: die Milch sofort dazugeben, danach 3 Minuten warten oder die Milch erst nach 3 Minuten dazugeben.\\
-	Welche Temperatur hat der Milchkaffee in beiden Fällen?
-	\textit{(Hinweis: Die Temperatur der Mischung ist der Mittelwert der einzelnen Temperaturen: $T=\frac{(T_1+T_2)}{2}$.)}
-		\end{itemize}
-	\end{enumerate}
 
-	\begin{lsg}{}
-		\begin{enumerate}
-			\item
-			\item
-			\item $0,208^\circ\mathrm{C} * \mathrm{min}^{-1}$\\
-			Erst abkühlen, dann Milch dazu: $33,44^\circ\mathrm{C}$
-			Variante 2: $37,14^\circ\mathrm{C}$
-		\end{enumerate}
-	\end{lsg}
 
 	\aufgabe{LGS}
 	%Nutzen in {alignat}{5}:{NR}{K1}{K2}{K3}{Ergebnis}
@@ -165,12 +134,28 @@ Gegeben sind die Ebene \\$E: \left[ \vec x -  \vektor{-1 \\ 4\\ -3}\right]*\vekt
 
 
 
-	\aufgabe{Vektorrechnung}
+\aufgabe{Funktionsterm aufstellen: }
+\begin{lsg}{}
+
+\end{lsg}
+
+
+\aufgabe{Vektorrechnung}
+\begin{enumerate}
+	\item Berechne das Skalarprodukt und das Kreuzprodukt der beiden Vektoren $\vektor{1\\4\\-2}$ und $\vektor{-4\\5\\2}$.
+	\item Berechne $\alpha$ so, dass die beiden Vektoren $\vektor{\\\\}$ und $\vektor{\\\\}$ orthogonal zueinander sind.
+	\item
+\end{enumerate}
+\begin{lsg}{}
 	\begin{enumerate}
-		\item Berechne das Skalarprodukt der beiden Vektoren:
-		\item Berechne $\alpha$ so, dass die beiden Vektoren orthogonal zueinander sind.
+		\item \begin{align*}
+			\vektor{1\\4\\-2}*\vektor{-4\\5\\2}&=-4+20-4=12 \\
+			\vektor{1\\4\\-2}\times\vektor{-4\\5\\2}&=\vektor{8+10\\8-2\\5+16}=\vektor{18\\6\\21}
+		\end{align*}
+		\item Berechne $\alpha$ so, dass die beiden Vektoren $\vektor{\\\\}$ und $\vektor{\\\\}$ orthogonal zueinander sind.
 		\item
 	\end{enumerate}
+\end{lsg}
 
 
 \end{document}
