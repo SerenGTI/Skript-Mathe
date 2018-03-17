@@ -15,11 +15,7 @@ Gebrochenrationale Funktionen, Asymptoten bestimmen
 
 2
 LGS 2
-Geraden mit Punkten aufstellen
 Ebenen aufstellen (orthogonale und so) fertig machen
-Kreuzprodukt
-Skalarprodukt
-
 
 
 3
