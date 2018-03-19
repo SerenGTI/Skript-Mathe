@@ -6,7 +6,6 @@ Trigonometrie erweitern, Funktionsterm anhand graph angeben
 Extrempunkte 1
 Exponentialfunktion 1
 Funktionenschar fertig machen joshua
-Stammfunktion Berechnen 1
 Eingeschlossener Flächeninhalt fertig machen joshua
 Rotationskörper fertig machen
 Gebrochenrationale Funktionen, Asymptoten bestimmen
