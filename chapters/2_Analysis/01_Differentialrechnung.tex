@@ -31,7 +31,7 @@
     % Achsen
     \draw[->] (-0.3,0) -- (8,0) coordinate[label = {below:$x$}] (xmax);
     \draw[->] (0,-0.3) -- (0,5) coordinate[label = {right:$f(x)$}] (ymax);
- 
+
     % Pfade
     \path[name path=x] (0.3,0.5) -- (6.7,4.7);
     \path[name path=y] plot[smooth] coordinates {(-0.3,2) (2,1.5) (4,2.8) (6,5)};
@@ -328,8 +328,9 @@ Betrachtet man den Abschnitt einer Funktion auf einem Intervall $[x_0,x_0+h]$, s
   Wir möchten nun die Ableitungsfunktion von $f(x)=x^2$ berechnen. Diese wird wie die Ableitung an einem Punkt berechnet: \\
   \begin{equation*}
     \begin{split}
-      f'(x) & = \lim\limits_{h \to 0}\frac{f(x+h)-f(x)}{h} = \lim\limits_{h \to 0}\frac{{(x+h)}^2-x^2}{h} = \lim\limits_{h \to 0}\frac{x^2+2xh+h^2-x^2}{h} \\
-      & = \lim\limits_{h \to 0}\frac{2xh+h^2}{h} = \lim\limits_{h \to 0}(2xh+h)\xrightarrow{h\rightarrow 0}2x
+      f'(x) & = \lim\limits_{h \to 0}\frac{f(x+h)-f(x)}{h} = \lim\limits_{h \to 0}\frac{{(x+h)}^2-x^2}{h} \\
+			& = \lim\limits_{h \to 0}\frac{x^2+2xh+h^2-x^2}{h} = \lim\limits_{h \to 0}\frac{2xh+h^2}{h} \\
+			& = \lim\limits_{h \to 0}(2xh+h)\xrightarrow{h\rightarrow 0}2x
     \end{split}
   \end{equation*}
 \end{bla}
