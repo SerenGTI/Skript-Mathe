@@ -111,7 +111,55 @@ Die Gerade $y=x$ und die $x$-Achse begrenzen zusammen mit den Geraden $x=2$ und 
 	\end{multicols}
 \end{lsg}
 
-
+\aufgabe{Rotationskörper: }
+\begin{enumerate}
+  \item Die Fläche, welche von der $x$-Achse und dem Graphen der Funktionen vollständig eingeschlossen wird, rotiert um die $x$-Achse.
+  Berechne den Rauminhalt des entstandenen Körpers.
+  \begin{itemize}
+    \item $f(x)=x^2-2x$
+    \item $g(x)=\sqrt{x}*(x-2)$
+    \item $h(x)=\frac 1 3 x^2-x$
+    \item $j(x)=x^2-5x+4$
+  \end{itemize}
+  \item Die Fläche, welche von den Graphen der Funktionen vollständig eingeschlossen wird, rotiert um die $x$-Achse.
+  Berechne den Rauminhalt des entstandenen Körpers.
+  \begin{itemize}
+    \item $f(x)= -x^2+4, \quad g(x)= x+2$
+    \item $h(x)= x^2-x+1, \quad j(x)= 4x-3$
+  \end{itemize}
+\end{enumerate}
+\begin{lsg}{}
+	\begin{enumerate}
+		\item \begin{itemize}
+			\item Nullstellen bei $x_0=0, x_1=2$
+			\begin{equation*}
+				V=\pi*\int\limits_0^2(x^2-2x)^2\d x =\frac {16\pi}{15}\approx 3,35
+			\end{equation*}
+			\item Nullstellen bei $x_0=0, x_1=2$
+			\begin{equation*}
+				V=\pi*\int\limits_0^2(\sqrt{x}*(x-2))^2\d x =\frac {4\pi}{3}\approx 4,18
+			\end{equation*}
+			\item Nullstellen bei $x_0=0, x_1=3$
+			\begin{equation*}
+				V=\pi*\int\limits_0^3(\frac 1 3 x^2-x)^2\d x =\frac {9\pi}{10}\approx 2,83
+			\end{equation*}
+			\item Nullstellen bei $x_0=1, x_1=4$
+			\begin{equation*}
+				V=\pi*\int\limits_1^4(x^2-5x+4)^2\d x =\frac {81\pi}{10}\approx 25,4
+			\end{equation*}
+		\end{itemize}
+		\item \begin{itemize}
+			\item Schnittpunkte bei $x_0=-2, x_1=1$
+			\begin{equation*}
+				V=\pi*\int\limits_-2^1\left((-x^2+4)-(x+2)\right)^2\d x =\frac {81\pi}{10}\approx 25,4
+			\end{equation*}
+			\item Schnittpunkte bei $x_0=1, x_1=4$
+			\begin{equation*}
+				V=\pi*\int\limits_1^4\left((4x-3)-(x^2-x+1)\right)^2\d x =\frac {81\pi}{10}\approx 25,4
+			\end{equation*}
+		\end{itemize}
+	\end{enumerate}
+\end{lsg}
 
 
 \end{document}
