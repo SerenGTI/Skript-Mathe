@@ -1,12 +1,10 @@
-0
+﻿0
 Trigonometrie erweitern, Funktionsterm anhand graph angeben
 
 
 1
 Extrempunkte 1
 Exponentialfunktion 1
-Funktionenschar fertig machen joshua
-Eingeschlossener Flächeninhalt fertig machen joshua
 Gebrochenrationale Funktionen, Asymptoten bestimmen
 
 
