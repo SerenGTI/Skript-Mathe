@@ -30,8 +30,36 @@ Gib eine Gleichung der Schnittgeraden der Ebenen $E: x_1-x_2+2x_3=7$ und $F:6x_1
 \end{lsg}
 
 
-
-
+%FERTIG
+\aufgabe{Differentialrechnung: }
+\begin{enumerate}
+	\item Gegeben sei folgende Funktion: $F(x,y)=2x^3-5y+x^2+10x-10$. Bestimmen Sie die Ableitung der durch $F(x,y)=0$ implizit gegebenen Funktion $y=h(x)$.
+	\item Gegeben sind die Funktionen:
+	$f(x) = (u \circ v)(x)$ und $g(x) = (u* v)(x)$
+	Bestimme die Ableitungen von $f$ und $g$ für $u(x)=x^2$ und $v(x)=\sin(2x)$
+	\item Bestimme jeweils $f_i'(3)$
+	\begin{itemize}
+		\item $f_1(x) = (x+5)^2$
+		\item $f_2(x) = \frac{1}{(x-5)^2}$
+	\end{itemize}
+\end{enumerate}
+\begin{lsg}{}
+	\begin{enumerate}
+		\item Aus $F(x,y)=0$ und $y=h(x)$ folgt:\begin{alignat*}{2}
+		&2x^3-5y+10x-10=0\quad&&|\ \text{Nach $y=$ umformen}\\
+		&y=\frac{2}{5} x^3+\frac{1}{5} x^2+2x-2 &&\Rightarrow h(x)\\
+		&h'(x)=\frac{6}{5} x^2+\frac{2}{5}x+2
+		\end{alignat*}
+		\item \begin{align*}
+		f'(x)&=\left(u(v(x))\right)'=\left({\sin(2x)}^2\right)'=2\sin(2x)\cdot \cos(2x) \cdot 2=4\sin(2x)\cdot \cos(2x)\\
+		g'(x)&=(u(x)\cdot v(x))'=\left(x^2\cdot \sin(2x)\right)'=2x\cdot \sin(2x)+x^2\cdot 2\cos(2x)
+		\end{align*}
+		\item \begin{align*}
+		f_1'(x)&=2(x+5)&\Rightarrow  &f_1'(3)=16\\
+		f_2'(x)&=\frac{-2}{(x-5)^3}&\Rightarrow &f_2'(3)=\frac{1}{4}
+		\end{align*}
+	\end{enumerate}
+\end{lsg}
 
 
 \aufgabe{Abstandsberechnungen Teil 1: }

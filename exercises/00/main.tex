@@ -228,7 +228,6 @@
     \item $f(x) = x^4-1$
   \end{enumerate}
 \end{multicols}
-\clearpage
 \begin{lsg}{}
   \begin{multicols}{3}
     \begin{enumerate}
@@ -248,15 +247,6 @@
     \end{enumerate}
   \end{multicols}
 \end{lsg}
-
-
-
-\aufgabe{Trigonometrie: }
-	Beschreiben Sie in Worten, wie sich der Graph von $g(x)=3\sin(3(x+1))-3$ von $\sin(x)$ unterscheidet.
-\begin{lsg}{}
-	Amplitude 3, Phasenverschiebung um 1 nach links, Verschiebung um 3 nach unten und Änderung der Periode auf $\frac{2\pi}{3}$
-\end{lsg}
-
 
 \aufgabe{Schnittpunkte von Funktionen: } In welchen Punkten schneiden sich die Funktionen?
 \begin{multicols}{3}
@@ -302,6 +292,38 @@
     \end{enumerate}
   \end{multicols}
 \end{lsg}
+
+
+\aufgabe{Trigonometrie: }
+	\begin{enumerate}
+		\item Beschreiben Sie in Worten, wie sich der Graph von $g(x)=3\sin(3(x+1))-3$ von $\sin(x)$ unterscheidet.
+		\item Gib die Amplitude, Verschiebung und Periode der folgenden Sinus-Funktionen an:
+		\begin{itemize}
+		\item $\sin\left(2(x-2)\right)+1$
+		\item $4\sin\left(\frac{3x}{4\pi}\right)$
+		\item $-2\sin\left(4x+8\right)-3\pi$
+		\end{itemize}
+		\item In Abbildung \ref{sinus:fig} gegeben ist der Graph F einer verschobenen Sinusfunktion. Gib einen möglichen Funktionsterm $f(x)$ an.
+		\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.7]{Afg_sinus.pdf}
+			\caption{Sinus-Funktion}
+			\label{sinus:fig}
+		\end{figure}
+	\end{enumerate}
+\begin{lsg}{}
+	\begin{enumerate}
+		\item Amplitude 3, Phasenverschiebung um 1 nach links, Verschiebung um 3 nach unten und Änderung der Periode auf $\frac{2\pi}{3}$
+		\item \begin{itemize}
+			\item Amplitude: $1$, Verschiebung von $(0|0)$ zu $(2|1)$, Periode: $\pi$
+			\item Amplitude: $4$, Periode: $\frac{3}{2}$
+			\item Amplitude: $2$, Verschiebung von $(0|0)$ zu $(-2|-3\pi)$, Periode: $\frac \pi 2$
+		\end{itemize}
+		\item Um $1$ vertikal und entweder um $-\frac{\pi}{2}$ oder $\frac{3\pi}{2}$ horizontal verschoben:\\
+		$f(x)=\sin\left(x+\frac{1}{2}\pi\right)+1$ oder $f(x)=\sin\left(x-\frac{3\pi}{2}\right)+1$
+	\end{enumerate}
+	\end{lsg}
+
 
 
 \aufgabe{Ableitungen: } Berechne jeweils die erste Ableitung der Funktionen
@@ -438,38 +460,6 @@
 
 			Mit Extrempunkten von $j$: $H(0|0), T(1|2)$ und einer Polstelle (senkrechte Asymptote) bei $x=\frac 1 2$
 		\end{enumerate}
-	\end{enumerate}
-\end{lsg}
-
-
-
-\aufgabe{Differentialrechnung: }
-\begin{enumerate}
-	\item Gegeben sei folgende Funktion: $F(x,y)=2x^3-5y+x^2+10x-10$. Bestimmen Sie die Ableitung der durch $F(x,y)=0$ implizit gegebenen Funktion $y=h(x)$.
-	\item Gegeben sind die Funktionen:
-	$f(x) = (u \circ v)(x)$ und $g(x) = (u* v)(x)$
-	Bestimme die Ableitungen von $f$ und $g$ für $u(x)=x^2$ und $v(x)=\sin(2x)$
-	\item Bestimme jeweils $f_i'(3)$
-	\begin{itemize}
-		\item $f_1(x) = (x+5)^2$
-		\item $f_2(x) = \frac{1}{(x-5)^2}$
-	\end{itemize}
-\end{enumerate}
-\begin{lsg}{}
-	\begin{enumerate}
-		\item Aus $F(x,y)=0$ und $y=h(x)$ folgt:\begin{alignat*}{2}
-		&2x^3-5y+10x-10=0\quad&&|\ \text{Nach $y=$ umformen}\\
-		&y=\frac{2}{5} x^3+\frac{1}{5} x^2+2x-2 &&\Rightarrow h(x)\\
-		&h'(x)=\frac{6}{5} x^2+\frac{2}{5}x+2
-		\end{alignat*}
-		\item \begin{align*}
-		f'(x)&=\left(u(v(x))\right)'=\left({\sin(2x)}^2\right)'=2\sin(2x)\cdot \cos(2x) \cdot 2=4\sin(2x)\cdot \cos(2x)\\
-		g'(x)&=(u(x)\cdot v(x))'=\left(x^2\cdot \sin(2x)\right)'=2x\cdot \sin(2x)+x^2\cdot 2\cos(2x)
-		\end{align*}
-		\item \begin{align*}
-		f_1'(x)&=2(x+5)&\Rightarrow  &f_1'(3)=16\\
-		f_2'(x)&=\frac{-2}{(x-5)^3}&\Rightarrow &f_2'(3)=\frac{1}{4}
-		\end{align*}
 	\end{enumerate}
 \end{lsg}
 
