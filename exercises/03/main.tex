@@ -1,7 +1,7 @@
 \input{../master/layout}
 \chead{\Large Übungsblatt 3}
 
-\newcommand{\vektor}[1]{\ensuremath\begin{pmatrix} #1 \end{pmatrix}}
+\usepackage{xfrac}
 
 \begin{document}
 \begin{inhalt}
@@ -10,5 +10,81 @@
 \end{inhalt}
 
 
+\aufgabe{Abstands- und Lageberechnungen: }
+Gegeben sind die Ebene \\$E: \left[ \vec x -  \vektor{-1 \\ 4\\ -3}\right]*\vektor{8\\ 1 \\-4}=0$ und die Gerade $g: \vec x=\vektor{7\\5\\-7}+t*\vektor{1\\-4\\1}$.
+\begin{enumerate}
+	\item Zeigen Sie, dass $E$ und $g$ parallel zueinander sind.
+	\item Bestimmen Sie den Abstand von $E$ und $g$.
+\end{enumerate}
+
+\begin{lsg}{}
+	\begin{enumerate}
+		\item Dafür müssen der Normalenvektor von $E$ und der Richtungsvektor von $g$ orthogonal sein.
+		\begin{equation*}
+			\vektor{8\\ 1 \\-4}*\vektor{1\\-4\\1}=8-4-4=0
+		\end{equation*}
+		\item Aufstellen einer Hilfsgeraden:
+		\begin{align*}
+			h: \vec x=\vektor{7\\5\\-7}+r*\vektor{8\\ 1 \\-4}
+		\end{align*}
+		Einsetzen von $h$ in $E$:
+		\begin{align*}
+			&\left[ \left[\vektor{7\\5\\-7}+r*\vektor{8\\ 1 \\-4}\right] -  \vektor{-1 \\ 4\\ -3}\right]*\vektor{8\\ 1 \\-4}=0\\
+			&\left[ \vektor{7+8r\\ 5+r \\-7-4r} -  \vektor{-1 \\ 4\\ -3}\right]*\vektor{8\\ 1 \\-4}=0\\
+			&\vektor{8+8r\\ 1+r \\-4-4r}*\vektor{8\\ 1 \\-4}=0\\
+			&8(8+8r)+(1+r)-4(-4-4r)=0\\
+			&64+64r+1+r+16+16r=0\\
+			&81+81r=0\\
+			&1+r=0\\
+			&r=-1\\
+			\intertext{Schnittpunkt mit der Ebene durch Einsetzen von $r$ in h:}
+			&\vektor{7\\5\\-7}-\vektor{8\\ 1 \\-4}=\vektor{-1 \\ 4 \\ -3}\\
+			\intertext{Abstand zwischen den Punkten (Stützpunkt von $g$ und Schnittpunkt $h$ mit $E$):}
+			&\vektor{-1 \\ 4 \\ -3} \text{ und } \vektor{7\\5\\-7} \\
+			&d(E,g)=\sqrt{8^2+1+(-4)^2}=\sqrt{81}=9
+		\end{align*}
+	\end{enumerate}
+\end{lsg}
+
+
+
+\aufgabe{Schnittgerade: }
+Gib eine Gleichung der Schnittgeraden der Ebenen $E: x_1-x_2+2x_3=7$ und $F:6x_1+x_2-x_3+7=0$ an.
+\begin{lsg}{}
+	$E$ und $F$ umformen in Parameterform durch finden von senkrechten Vektoren zum Normalenvektor:
+	\begin{align*}
+		&v_1-v_2+2v_3=0 \rightarrow\vec v=\vektor{1\\1\\0}
+		&u_1-u_2+2u_3=0 \rightarrow\vec u=\vektor{2\\0\\1}\\
+		&E: \vec x=\vektor{7\\0\\0}+s*\vektor{1\\1\\0}+t*\vektor{2\\0\\1}
+	\end{align*}
+	\begin{align*}
+		&6v_1+v_2-v_3=0 \rightarrow\vec v=\vektor{1\\0\\6}
+		&6u_1+u_2-u_3=0 \rightarrow\vec u=\vektor{0\\1\\1}\\
+		&E: \vec x=\vektor{0\\0\\7}+s*\vektor{1\\0\\6}+t*\vektor{0\\1\\1}
+	\end{align*}
+	Gleichsetzen der Ebenen durch $\vec x$:
+	\begin{align*}
+		\vektor{0\\0\\7}+a*\vektor{1\\0\\6}+b*\vektor{0\\1\\1}=\vektor{7\\0\\0}+c*\vektor{1\\1\\0}+d*\vektor{2\\0\\1}\\
+		a*\vektor{1\\0\\6}+b*\vektor{0\\1\\1}-c*\vektor{1\\1\\0}-d*\vektor{2\\0\\1}=\vektor{7\\0\\-7}
+	\end{align*}
+	Aufstellen einer geeigneten Matrix:
+	\begin{align*}
+		\ematrix{rrrr|r}
+		{1 & 0 & -1 & -2 & 7\\
+		0 & 1 & -1 & 0 & 0\\
+		6 & 1 & 0 & -1 & -7}\rightsquigarrow
+		\ematrix{rrrr|r}
+		{1 & 0 & 0 & \sfrac{-3}{7} & 0\\
+		0 & 1 & 0 & \sfrac{11}{7} & -7\\
+		0 & 0 & 1 & \sfrac{11}{7} & -7}
+	\end{align*}
+	Einsetzen in die obere Gleichung:
+	\begin{align*}
+		&\frac37*\vektor{1\\0\\6}+(-7-\frac{11}{7})*\vektor{0\\1\\1}-(-7-\frac{11}{7})*\vektor{1\\1\\0}-d*\vektor{2\\0\\1}=\vektor{7\\0\\-7}\\
+		&\vektor{\sfrac37\\0\\\sfrac{18}{7}}+\vektor{0\\\sfrac{-60}{7}\\\sfrac{-60}{7}}+\vektor{\sfrac{60}{7}\\\sfrac{60}{7}\\0}-d*\vektor{2\\0\\1}=\vektor{7\\0\\-7}\\
+		&g: \vec x = \vektor{2\\0\\1}+d*\vektor{2\\0\\1}
+	\end{align*}
+
+\end{lsg}
 
 \end{document}

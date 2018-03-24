@@ -26,14 +26,17 @@
 
 %% LÖSUNGEN ANZEIGEN
 \newif\ifshow
-%\showtrue
-\showfalse
+\showtrue
+%\showfalse
 
 %%%SECTIONING
 \renewcommand*{\marginfont}{\noindent\rule{0pt}{0.7\baselineskip}\footnotesize}
 
 \newcommand{\aufgabe}[1]{\subsection{#1}}
 \newcommand{\loesung}[1]{\subsubsection{#1}}
+
+\newcommand{\simpleset}[1]{\ensuremath \left\{ #1 \right\}}
+\newcommand{\ematrix}[2]{\renewcommand{\arraystretch}{1}\ensuremath\left(\begin{array}{@{}#1@{}}#2\end{array}\right)}
 
 \renewcommand{\theenumi}{\alph{enumi})}
 \renewcommand{\labelenumi}{\text{\theenumi}}
