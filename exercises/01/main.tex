@@ -45,23 +45,23 @@ Löse die Gleichung $\e^{5x}-\e^{3x}=6\e^x$.\\
 	\end{enumerate}
 \end{lsg}
 
-\aufgabe{Extrempunkte}
+\aufgabe{\color{red}Extrempunkte}
 \begin{enumerate}
 	\item Bestimme Extrempunkte und Wendestellen von: $f(x)=-x^3+3x^2+5x+7$
-	
+
 	\item Gegeben ist $g(x)=10x*\e^{\frac{1}{2}x}$ (vgl. Abi 2014)\begin{itemize}
 		\item Bestimme Extrempunkt und Wendepunkt von $g$
 		\item Für jedes $u>0$ sind O$(0|0)$, P$(u|0)$ und Q$(u|g(u))$ die Eckpunkte eines Dreiecks. Bestimme einen Wert für $u$ so, dass dieses Dreieck den Flächeninhalt $8$ hat.
 		\item Auf der x-Achse gibt es Intervalle der Länge 3, auf denen die Funktion $g$ den Mittelwert $2,2$ besitzt. Bestimme die Grenzen eines solchen Intervalls.
 	\end{itemize}
-	
+
 \end{enumerate}
 
 \begin{lsg}{}
 \begin{enumerate}
-	\item $f'(x)=-3x^2+6x+5$ und 
+	\item $f'(x)=-3x^2+6x+5$ und
 	$f''(x)=-6x+6$\\
-	Nullstellen von $f(x)$ sind 
+	Nullstellen von $f(x)$ sind
 \end{enumerate}
 \end{lsg}
 
@@ -179,6 +179,22 @@ Die Gerade $y=x$ und die $x$-Achse begrenzen zusammen mit den Geraden $x=2$ und 
   A_2&= \int_2^u\left(x-\frac{8}{x^2}\right)\d x&&|\ \text{Fläche zwischen $f(x)=x-\frac{8}{x^2}$ und $x$-Achse}
   \end{align*}
   Gleichsetzten und mittels CAS nach $u$ auflösen ergibt: $u\approx 3,12$
+\end{lsg}
+
+
+\aufgabe{Uneigentliches Flächenintegral}
+\begin{enumerate}
+	\item Berechnen Sie $\int\limits^\infty_0 e^{-x}\d x$
+\end{enumerate}
+\begin{lsg}{}
+	\begin{align*}
+		&\int\limits^k_0 e^{-x}\d x\\
+		&=\left[-\e^{-x}\right]_0^k\\
+		&=(-\e^{-k})-(-1)\\
+		&=-\e^{-k}+1\\
+		&\lim\limits_{k\rightarrow \infty}-\e^{-k}+1\\
+		&=0+1=1
+	\end{align*}
 \end{lsg}
 
 
