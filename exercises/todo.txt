@@ -5,7 +5,7 @@ Extrempunkte 1
 
 
 2
-Ebenen aufstellen (orthogonale und so) fertig machen
+Ebenen aufstellen
 
 
 3
