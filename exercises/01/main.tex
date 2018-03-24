@@ -4,7 +4,7 @@
 \begin{document}
 \begin{inhalt}
 	\item Extremstellen und -Punkte \seite{29}
-	\item Exponentialfunktion, Logarithmus \seite{33}
+	\item Exponentialfunktion \seite{33}
 	\item Funktionenscharen \seite{35}
   \item Integral \seite{37}, Rotationskörper \seite{40}, Flächeninhalte \seite{41}
 	\item Funktionsanalyse \seite{45}, gebrochenrationale Funktionen, Asymptoten \seite{46}
@@ -28,40 +28,11 @@ Löse die Gleichung $\e^{5x}-\e^{3x}=6\e^x$.\\
 \end{lsg}
 
 
-
-\aufgabe{Graphanalyse: } (vgl. Abitur 2015)
-\begin{multicols}{2}
-	Die Abbildung zeigt den Graphen der Ableitungsfunktion $f'$ einer ganzrationalen Funktion $f$.
-	Entscheiden Sie ob die folgenden Aussagen wahr oder falsch sind. Begründen Sie jeweils Ihre Antwort.
-	\begin{enumerate}
-		\item Der Graph von $f$ hat bei $x=-3$ einen Tiefpunkt.
-		\item $f(-2)<f(-1)$
-		\item $f''(-2)+f'(-2)<1$
-		\item Der Grad der Funktion $f$ ist mindestens vier.
-	\end{enumerate}
-	\columnbreak
-
-	\centering
-	\includegraphics[width=0.7\linewidth]{Graphanalyse.png}
-\end{multicols}
-
-\begin{lsg}{}
-	\begin{enumerate}
-		\item Wahr, Vorzeichenwechsel bei $x=-3$
-		\item Wahr, streng monoton steigend im Intervall $[-2;-1]$
-		\item Falsch, $f''(-2)+f'(-2)=0+2>1$
-		\item Wahr, $f'$ besitzt zwei Extrempunkte $\rightsquigarrow f''$ ist mindestens vom Grad 2. Der Graph der Abbildung könnte auch drei Nullstellen haben, $f'$ ist also mindestens vom Grad 3.
-	\end{enumerate}
-\end{lsg}
-
-
-
-
-
 \aufgabe{Exponentialfunktion}
 \begin{enumerate}
 	\item Gib $f(x)=25^x$ als natürliche Exponentialfunktion an.
 	\item	Wie unterscheidet sich der Graph von $-\e^{-x}$ von $\e^x$? Formuliere die Erklärung schrittweise.
+
 \end{enumerate}
 \begin{lsg}{}
 	\begin{enumerate}
@@ -74,15 +45,57 @@ Löse die Gleichung $\e^{5x}-\e^{3x}=6\e^x$.\\
 	\end{enumerate}
 \end{lsg}
 
+\aufgabe{Extrempunkte}
+\begin{enumerate}
+	\item Führe eine vollständige Graphanalyse von $f$ durch. (Dazu gehören Nullstellen, Wendepunkte, Extrempunkte, Monotonie, Verhalten für $\pm \infty$, Definitionsbreich und Wertemenge bzw Definitonslücken)
+	\item
+\end{enumerate}
 
-\aufgabe{Integral: }
-Die Gerade $y=x$ und die $x$-Achse begrenzen zusammen mit den Geraden $x=2$ und $x=u$ mit $u>2$ eine Fläche. Bestimmen Sie einen Wert für $u$ so, dass $f(x)=x-\frac{8}{x^2}$ diese Fläche in zwei inhaltsgleiche Teile zerlegt. \cas
 \begin{lsg}{}
-  Bestimme die Flächeninhalte der Teilflächen:\begin{align*}
-  A_1&=\int_2^u\left(x-\left(x-\frac{8}{x^2}\right)\right)\d x&&|\ \text{Fläche zwischen $y=x$ und $f(x)=x-\frac{8}{x^2}$}\\
-  A_2&= \int_2^u\left(x-\frac{8}{x^2}\right)\d x&&|\ \text{Fläche zwischen $f(x)=x-\frac{8}{x^2}$ und $x$-Achse}
-  \end{align*}
-  Gleichsetzten und mittels CAS nach $u$ auflösen ergibt: $u\approx 3,12$
+
+\end{lsg}
+
+
+\aufgabe{Funktionenscharen: }
+\begin{enumerate}
+  \item Berechne die Nullstellen der Funktionenscharen in Abhängigkeit von $a\in \R, a\neq 0$:
+  \begin{multicols}{2}
+  \begin{itemize}
+    \item $f_a(x)=x^2+2ax+9$
+    \item $g_a(x)=5ax+15a$
+    \item $h_a(x)=x^3-a^2$
+    \item $j_a(x)=(x-3a)(x+6a)$
+  \end{itemize}
+  \end{multicols}
+  \item Gegeben ist die Funktionenschar $f_a$ mit $f_a(x)=(x+a)*\e^{-x}\ , x\in \R$ .
+  \begin{itemize}
+    \item Untersuche die Lage des Maxmimums.
+    \item Gib die Gleichung der Funktion an, auf der die Maxima aller Scharkurven liegen.
+  \end{itemize}
+\end{enumerate}
+\begin{lsg}{}
+	\begin{enumerate}
+		\item \begin{itemize}
+			\item $0=x^2+2ax+9 \rightsquigarrow x_1=\sqrt{a^2-9}-a,\ x_2=-\sqrt{a^2-9}-a$\\
+			\item $0=5ax+15a \rightsquigarrow x=-3$\\
+			\item $0=x^3-a^2 \rightsquigarrow x=\sqrt[3]{a^2}$\\
+			\item $\text{Nullprodukt:}\ x_1=3a,\ x_2=-6a$
+		\end{itemize}
+		\item \begin{itemize}
+			\item Ableitung bilden: \begin{align*}
+				f'_a(x)&=\e^{-x}-x\e^{-x}-a\e^{-x}=(1-x-a)*\e^{-x}\\
+				f''_a(x)&=-\e^{-x}-\e^{-x}+x\e^{-x}+a\e^{-x}=(a+x-2)*\e^{-x}
+			\end{align*}\\
+			Extremstelle: $f'_a(x)=0 \rightsquigarrow x=1-a$ \\
+			In $f''_a$ einsetzen: $f''_a(1-a)=(a+1-a-2)*\e^{-(1-a)}<0$ für alle $a\in \R\Rightarrow $HP bei $x=1-a$\\
+			HP bei $(1-a|\e^{a-1})$
+			\item Aus dem HP bei $(1-a|\e^{a-1})$ folgt $x_{h}=1-a \rightsquigarrow a=1-x_{h}$\\
+			Eingesetzt in $y_{h}=\e^{a-1}$ folgt: $y_h=\e^{-x_h}$ \\
+			Damit gilt für die Ortskurve: $t(x)=\e^{-x}$
+
+		\end{itemize}
+
+	\end{enumerate}
 \end{lsg}
 
 
@@ -111,16 +124,66 @@ Die Gerade $y=x$ und die $x$-Achse begrenzen zusammen mit den Geraden $x=2$ und 
 	\end{multicols}
 \end{lsg}
 
+
+
+
+\aufgabe{Integral: }
+\begin{enumerate}
+	\item Welche der Auswahlmöglichkeiten können eingesetzt werden?
+	\begin{equation*}
+		\int\limits_0^5 \left(3x^2+ \frac 1 5 x\right)  \d x = \Box
+	\end{equation*}
+  \begin{multicols}{4}
+    \begin{itemize}
+      \item $\stf{6x + \frac{1}{5}}_0^5$
+      \item $\bigg[x^3 + 0,1 x^2\bigg]_0^5$
+  		\item $127,5$
+      \item $\stf{x^3 + \frac{1}{10} x^2}_1^6$
+  	\end{itemize}
+  \end{multicols}
+  \item Berechne den Gesamtinhalt der Flächen, die durch die Schaubilder der Funktionen $f$ und $g$ eingeschlossen wird:
+  \begin{itemize}
+    \item $f(x)=x^2, g(x)=2-x^2$
+    \item $h(x)=x^3, i(x)=x^2$
+    \item $j(x)=x^3, k(x)=x\ $ (Achtet auf Flächen über und unter der x-Achse)
+  \end{itemize}
+\end{enumerate}
+\begin{lsg}{}
+  \begin{enumerate}
+    \item $\bigg[x^3 + 0,1 x^2\bigg]_0^5$ und $127,5$
+    \item
+    \begin{itemize}
+      \item Schnittpunkte der Graphen: $x_{1,2}=\pm 1$\\ $\int\limits_{-1}^1 2-x^2-x^2\d x=\left[2x-\frac{2}{3}x^3\right]_{-1}^1=\frac 8 3$
+      \item Schnittpunkt der Graphen: $x_1=0,\ x_2=1$ \\$\int_0^1 (x^2-x^3)\d x=\left[\frac{1}{3}x^3-\frac{1}{4}x^4\right]_0^1=\frac 1 {12}$
+      \item Schnittpunkte der Graphen: $x_{1,2}=\pm 1,\ x_3=0$ \\$\int_{-1}^0 (x^3-x)\d x+\int_0^1 (x-x^3)\d x=2*\left[\frac{1}{2}x^2-\frac{1}{4}x^4\right]_0^1=\frac 1 2$
+    \end{itemize}
+  \end{enumerate}
+\end{lsg}
+
+
+\aufgabe{Integral: }
+Die Gerade $y=x$ und die $x$-Achse begrenzen zusammen mit den Geraden $x=2$ und $x=u$ mit $u>2$ eine Fläche. Bestimmen Sie einen Wert für $u$ so, dass $f(x)=x-\frac{8}{x^2}$ diese Fläche in zwei inhaltsgleiche Teile zerlegt. \cas
+\begin{lsg}{}
+  Bestimme die Flächeninhalte der Teilflächen:\begin{align*}
+  A_1&=\int_2^u\left(x-\left(x-\frac{8}{x^2}\right)\right)\d x&&|\ \text{Fläche zwischen $y=x$ und $f(x)=x-\frac{8}{x^2}$}\\
+  A_2&= \int_2^u\left(x-\frac{8}{x^2}\right)\d x&&|\ \text{Fläche zwischen $f(x)=x-\frac{8}{x^2}$ und $x$-Achse}
+  \end{align*}
+  Gleichsetzten und mittels CAS nach $u$ auflösen ergibt: $u\approx 3,12$
+\end{lsg}
+
+
 \aufgabe{Rotationskörper: }
 \begin{enumerate}
   \item Die Fläche, welche von der $x$-Achse und dem Graphen der Funktionen vollständig eingeschlossen wird, rotiert um die $x$-Achse.
   Berechne den Rauminhalt des entstandenen Körpers.
+  \begin{multicols}{2}
   \begin{itemize}
     \item $f(x)=x^2-2x$
     \item $g(x)=\sqrt{x}*(x-2)$
     \item $h(x)=\frac 1 3 x^2-x$
     \item $j(x)=x^2-5x+4$
   \end{itemize}
+  \end{multicols}
   \item Die Fläche, welche von den Graphen der Funktionen vollständig eingeschlossen wird, rotiert um die $x$-Achse.
   Berechne den Rauminhalt des entstandenen Körpers.
   \begin{itemize}
@@ -158,6 +221,40 @@ Die Gerade $y=x$ und die $x$-Achse begrenzen zusammen mit den Geraden $x=2$ und 
 				V=\pi*\int\limits_1^4\left((4x-3)-(x^2-x+1)\right)^2\d x =\frac {81\pi}{10}\approx 25,4
 			\end{equation*}
 		\end{itemize}
+	\end{enumerate}
+\end{lsg}
+
+\aufgabe{Asymptoten}
+\begin{enumerate}
+	\item Gib die x- und y-Werte der senkrechten bzw. waagrechten Asymptoten der Funktionen an:
+	\begin{multicols}{3}
+	\begin{itemize}
+		\item $f(x)=\frac{1}{x}$
+		\item $g(x)=\frac{1}{x-1}$
+		\item $h(x)=\frac{2x}{x^2-1}$
+		\item $i(x)=\e^{-x}+1$
+		\item $j(x)=-\e^{x}-4$
+		\item $k(x)=\frac{x^2+4x-5}{2x^2-4}$
+	\end{itemize}
+	\end{multicols}
+	\item Gib die Gleichung der gebrochenrationalen Funktion $f$ mit folgenden Eigenschaften an:\\
+	Asymptoten: $x=-2,\ x=2,\ y=-4$ und Nullstellen: $x=3$
+\end{enumerate}
+\begin{lsg}{}
+	\begin{enumerate}
+	\item \begin{multicols}{2}
+		\begin{itemize}
+			\item $f(x)$: Senkrechte Asymptote bei $x=0$,\\ waagrechte Asymptote bei $y=0$
+			\item $g(x)$: Senkrechte Asymptote bei $x=1$,\\ waagrechte Asymptote bei $y=0$
+			\item $h(x)$: Senkrechte Asymptote bei $x_{1,2}=\pm 1$,\\ waagrechte Asymptote bei $y=0$
+			\item $i(x)$: waagrechte Asymptote bei $y=1$
+			\item $j(x)$: waagrechte Asymptote bei $y=-4$
+			\item $k(x)$: Senkrechte Asymptote bei $x_{1,2}=\pm \sqrt{2}$,\\ waagrechte Asymptote bei $y=\frac{1}{2}$
+		\end{itemize}
+		\end{multicols}
+		\item senkrechte Asymptoten bei $x=-2,\ x=2$ ergibt: Nenner muss $-2$ und $2$ als Nullstellen haben $\rightsquigarrow x^2-4$\\
+		waagrechte Asymptote bei $y=-4$ ergibt: Zähler und Nenner müssen selben Grad haben $\left(x^2\right)$ und als Quotient $-4$ ergeben $\rightsquigarrow \frac{-4x^2}{x^2-4}$\\
+		Nullstelle $x=3$ ergibt: Zähler muss $3$ als Nullstelle haben $\rightsquigarrow \frac{-4x^2+36}{x^2-4}$
 	\end{enumerate}
 \end{lsg}
 
