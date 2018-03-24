@@ -1,6 +1,8 @@
 \input{../master/layout}
 \chead{\Large Übungsblatt 4}
 
+\newcommand{\simpleset}[1]{\ensuremath \left\{ #1 \right\}}
+
 \begin{document}
 \begin{inhalt}
 	\item Zufallsexperimente \seite{87}
@@ -9,7 +11,7 @@
 	\item Hypothesentest \seite{95}
 \end{inhalt}
 
-\aufgabe{}
+\aufgabe{Kombinatorik und Pfadregeln: }
 Ein Fußballspieler verwandelt erfahrungsgemäß $90\%$ aller Elfmeter.
 \begin{enumerate}
 	\item Mit welcher Wahrscheinlichkeit verwandelt er von drei Elfmetern nur den ersten bzw mindestens einen?
@@ -29,4 +31,68 @@ Ein Fußballspieler verwandelt erfahrungsgemäß $90\%$ aller Elfmeter.
 	\end{enumerate}
 \end{lsg}
 
+
+\aufgabe{Hypothesentest 1: }
+Ein Labor entwickelt einen neuen Impfstoff und testet ihn in einem Tierversuch mit 800 Mäusen. Mit dem Impfstoff dürfen keine klinischen Studien an Menschen durchgeführt werden, wenn sich im Tierversuch mindestens $2\%$ unerwünschte Nebenwirkungen zeigen.
+\begin{enumerate}
+	\item Bestimme für die Nullhypothese $H_0:p\geq 2^\%$ die Entscheidungsregel für den Test mit 800 Mäusen mit einer Irrtumswahrscheinlichkeit von höchstens $1\%$.
+	\item Welche Bedeutung haben die Fehler 1. und 2. Art? Wie könnte man erreichen, dass sowohl der Fehler 1. Art als auch der Fehler 2. Art gleichzeitig kleiner werden?
+\end{enumerate}
+\begin{lsg}{}
+	\begin{enumerate}
+		\item \begin{align*}
+			&n=800, \alpha=0,01, H_0:p\geq 2\%
+			\intertext{$X$ ist die Anzahl Mäuse mit Nebenwirkungen, $X$ ist binomialverteilt. Gesucht ist ein $k$ für das gilt:}
+			B_{800;0,02}\quad &P(X\leq k)\leq 0,01\\
+			&P(X\leq 7)=0,0095\\
+			&P(X\leq 8)=0,021
+			\intertext{Damit bildet $7$ die Grenze des Annahmebereichs.}
+			&A=\simpleset{0,1,\ldots,7}\\
+			&\overline A =\simpleset{8,\ldots,800}
+			\intertext{Wenn mehr als 7 Mäuse Nebenwirkungen zeigen, ist $H_0$ zu verwerfen.}
+		\end{align*}
+		\item Der Fehler 1. Art ist die Wahrscheinlichkeit, mit der man durch Zufall eine wahre Hypothese fälschlicherweise verwirft, der Fehler 2. Art ist die Wahrscheinlichkeit, mit der man eine falsche Hypothese fälschlicherweise annimmt.
+
+		Beide Fehler bekommt man nur durch Erhöhung des Versuchsumfangs $n$ kleiner. Somit fallen Zufälle, die zu den Fehlern führen weniger stark ins Gewicht.
+	\end{enumerate}
+\end{lsg}
+
+
+\aufgabe{Hypothesentest 2: }
+Ein Computerhersteller bezieht von einem Lieferanten Speicherchips. Erfahrungsgemäß sind $95\%$ der Chips einwandfrei. Wenn mindestens $95\%$ der Chips einwandfrei sind, nimmt er die Lieferung an, ansonsten schickt er sie zurück.
+
+Stelle eine Entscheidungsregel auf, wenn bei einem Stichprobenumfang von 200 Chips die Irrtumswahrscheinlichkeit höchstens $10\%$ betragen soll.
+\begin{lsg}{}
+	\begin{align*}
+		&n=200, p=0.95, H_0:p\geq 0.95, \alpha=0.1
+		\intertext{$X$ ist die Anzahl einwandfreier Chips, $X$ ist binomialverteilt.}
+		B_{200;0,95}\quad & P(X\leq k )\leq 0,1\\
+		&P(X\leq 185)=0,0781\\
+		&P(X\leq 186)=0,1299
+		\intertext{Damit bildet 186 die Grenze des Annahmebereichs.}
+		&A=\simpleset{186,187,\ldots,200}\\
+		&\overline A =\simpleset{1,\ldots,185}
+		\intertext{Wenn mehr als 185 Chips einwandfrei sind, so behält er die Sendung, sonst schickt er sie zurück.}
+	\end{align*}
+\end{lsg}
+
+
+\aufgabe{Hypothesentest 3: }
+Bei einem Glücksspiel wird ein Tetraeder mit den Tahlen 1 bis 4 eingeetzt. Eva behauptet, der Tetraeder sei nicht ideal, er liefere mit einer Wahrscheinlichkeit von höchstens $15\%$ eine 4. Daraufhin wirft Tim mit dem Tetraeder 60 mal und notiert sich, wie oft die Zahl 4 auftritt. Er erhält insgesamt 12 mal die Zahl 4.
+
+Kann Tim bei einem Signifikanzniveau von $6\%$ die Behauptung von Eva widerlegen? Führe einen geeigneten Signifikanztest durch.
+
+\begin{lsg}{}
+	\begin{align*}
+		&n=60, H_0:p_4\geq 15\%, \alpha=0.06
+		\intertext{$X$ ist die Anzahl geworfener 4er, $X$ ist binomialverteilt.}
+		B_{60;0,15}\quad & P(X\geq k )\leq 0,06\\
+		&P(X\geq 13)=0,106\\
+		&P(X\geq 14)=0,0578
+		\intertext{Damit bildet 13 die Grenze des Annahmebereichs.}
+		&A=\simpleset{0,1,\ldots,13}\\
+		&\overline A =\simpleset{14,\ldots,60}
+		\intertext{Das heißt, Tim kann die Behauptung nicht widerlegen, denn 12 liegt nicht in $A$.}
+	\end{align*}
+\end{lsg}
 \end{document}
