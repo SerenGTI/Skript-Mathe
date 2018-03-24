@@ -8,15 +8,12 @@ Gebrochenrationale Funktionen, Asymptoten bestimmen
 
 
 2
-LGS 2
 Ebenen aufstellen (orthogonale und so) fertig machen
 
 
 3
 Abstände
 Geraden im Raum
-Ebene u Geraden im Raum
-Schnittgeraden/Punkte
 Winkel
 
 
