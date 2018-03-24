@@ -1,6 +1,3 @@
-# Alle PDFs ignorieren und die eine wichtige mit git add -f hinzufügen
-*.pdf
-
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
