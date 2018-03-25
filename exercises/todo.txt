@@ -1,20 +1,25 @@
-﻿0 montag fertig
+﻿0 fertig
 
+<<<<<<< HEAD
 1 dienstag fertig
+=======
+1 fertig
+>>>>>>> 58c5dc3ab948231a40f545525eeb5295f8aa670d
 
-
-2 mittwoch
+2
 Ebenen aufstellen
 
 
-3 donnerstag + abi!
+3
+Abstände
+Geraden im Raum
 Winkel
 
 
 
-4 freitag
+4
 siehe Aufgabenblatt stochastik
 
 
 
-5(abi) donnerstag/freitag fertig
+5(abi) fertig

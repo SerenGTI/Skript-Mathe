@@ -11,7 +11,7 @@
 
 
 
-\aufgabe{Wachstum}
+\aufgabe{Wachstum}\cas
 \begin{enumerate}
 	\item Bakterien vermehren sich durch Teilung, wobei sich eine Bakterienzelle durchschnittlich alle 10 Minuten teilt. Zum Zeitpunkt $t=0$ sei genau eine Bakterienzelle vorhanden.
 	\begin{itemize}
@@ -39,7 +39,7 @@ Welche Temperatur hat der Milchkaffee in beiden Fällen?
 	\begin{enumerate}
 		\item
 		\begin{itemize}
-			\item Exponentielles Wachstum, allgemeine Form: $B(t)=c*a^x=\e^{\ln(a)x}$%
+			\item Exponentielles Wachstum, allgemeine Form: $B(t)=c*a^x=c*\e^{\ln(a)x}$%
 			\begin{align*}
 				c&=1, \text{ da $B(0)=1$}\\
 				\intertext{Es soll gelten:}
@@ -97,9 +97,9 @@ Welche Temperatur hat der Milchkaffee in beiden Fällen?
 
 
 \aufgabe{Geraden und Ebenen aufstellen: }
-\begin{multicols}{2}
+
 	\begin{enumerate}
-		\item Gib eine Geradengleichung an, dass sie durch die gegebenen Punkte läuft:
+		\item Gib eine Geradengleichung so an, dass sie durch die gegebenen Punkte läuft:
 		\begin{itemize}
 			\item $P(1|3|5)$, $Q(2|2|2)$
 			\item $R(-2|2|0)$, $S(1|3|4)$
@@ -118,7 +118,7 @@ Welche Temperatur hat der Milchkaffee in beiden Fällen?
 			\item$\vec r=\vektor{6\\3\\7},\vec s=\vektor{1\\2\\4}$
 		\end{itemize}
 	\end{enumerate}
-\end{multicols}
+
 \begin{lsg}{}
 	\begin{enumerate}
 		\item
@@ -159,7 +159,7 @@ Welche Temperatur hat der Milchkaffee in beiden Fällen?
 			Flächeninhalt des aufgespannten Parallelogramms ist gleich dem Betrag des Vektors, der durch das Kreuzprodukt entsteht:
 
 			$A=\left|\vektor{-2\\-17\\9}\right|=\sqrt{4+289+81}=\sqrt{374}\approx 19,34$
-		\end{itemize}
+		\end{enumerate}
 	\end{enumerate}
 \end{lsg}
 
@@ -167,7 +167,7 @@ Welche Temperatur hat der Milchkaffee in beiden Fällen?
 
 
 
-\aufgabe{Ebenengleichungen: }
+\aufgabe{\color{red}Ebenengleichungen: }
 Bestimme die Ebene in der angegebenen Darstellungsform:
 \begin{enumerate}
 	\item $E$ enthält die Punkte $A(2|2|2), B(4|1|3)$ und $C(8|4|5)$. Gib $E$ in Normalenform an. %Parameterform -> Normalenform,
@@ -176,11 +176,15 @@ Bestimme die Ebene in der angegebenen Darstellungsform:
 \end{enumerate}
 \begin{lsg}{}
 	\begin{enumerate}
-		\item
+		\item Parameterform von $E$: $\vec{x}=\overrightarrow{OA}+s*\overrightarrow{AB}+t*\overrightarrow{AC}\rightsquigarrow \vec{x}=\vektor{2\\2\\2}+s*\vektor{2\\-1\\1}+t*\vektor{6\\2\\3}$\\
+		Umformen nach Normalenform: $\vektor{2\\-1\\1}\times \vektor{6\\2\\3}=\vektor{-5\\0\\10}$\\
+		$E:\left[\vec{x}-\vektor{2\\2\\2}\right]*\vektor{-5\\0\\10}=0$
 		\item In Normalenform aufstellen:
 		\begin{equation*}
-			F: \left[\vec x - \frac 12 *\vektor{2\\-2\\-4}\right]*\vektor{2\\-2\\-4}=0
+			F: \left[\vec x - \frac{1}{2}*\overrightarrow{AA'}+\overrightarrow{OA}\right]*\overrightarrow{AA'}=0\rightsquigarrow F: \left[\vec x - \vektor{2\\3\\5}\right]*\vektor{2\\-2\\-4}=0
 		\end{equation*}
+		In Parameterform umwandeln: 
+		\item 
 	\end{enumerate}
 \end{lsg}
 
