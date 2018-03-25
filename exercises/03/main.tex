@@ -10,6 +10,28 @@
 \end{inhalt}
 
 
+
+\aufgabe{Lagebeziehungen und Ebene aufstellen: } Gegeben sind die Geraden $g$ und $h$:
+\begin{equation*}
+	g:\vec x=\vektor{2\\-3\\3}+t*\vektor{-1\\-1\\-1} \text{ und } h:\vec x=\vektor{4\\4\\4}+s*\vektor{1\\1\\1}
+\end{equation*}
+\begin{enumerate}
+	\item Welche der beiden Geraden geht durch den Ursprung?
+	\item Wie liegen die beiden Geraden zueinander?
+	\item Gib eine Gleichung der Ebene an, in der beide Geraden liegen.
+\end{enumerate}
+\begin{lsg}{}
+	\begin{enumerate}
+		\item $h$ geht (mit $s=-4$) durch den Ursprung.
+		\item Sie sind parallel denn die beiden Richtungsvektoren sind vielfache voneinander.
+		\item Stützvektor der Ebene ist der Ursprung, beide Stützvektoren der Geraden bilden die Spannvektoren der Ebene:
+		\begin{equation*}
+			E: \vec x=t*\vektor{2\\-3\\3}+s*\vektor{4\\4\\4}
+		\end{equation*}
+	\end{enumerate}
+\end{lsg}
+
+
 \aufgabe{Abstands- und Lageberechnungen: }
 Gegeben sind die Ebene \\$E: \left[ \vec x -  \vektor{-1 \\ 4\\ -3}\right]*\vektor{8\\ 1 \\-4}=0$ und die Gerade $g: \vec x=\vektor{7\\5\\-7}+t*\vektor{1\\-4\\1}$.
 \begin{enumerate}
@@ -48,43 +70,89 @@ Gegeben sind die Ebene \\$E: \left[ \vec x -  \vektor{-1 \\ 4\\ -3}\right]*\vekt
 
 
 
-\aufgabe{Schnittgerade: }
-Gib eine Gleichung der Schnittgeraden der Ebenen $E: x_1-x_2+2x_3=7$ und $F:6x_1+x_2-x_3+7=0$ an.
-\begin{lsg}{}
-	$E$ und $F$ umformen in Parameterform durch finden von senkrechten Vektoren zum Normalenvektor:
-	\begin{align*}
-		&v_1-v_2+2v_3=0 \rightarrow\vec v=\vektor{1\\1\\0}
-		&u_1-u_2+2u_3=0 \rightarrow\vec u=\vektor{2\\0\\1}\\
-		&E: \vec x=\vektor{7\\0\\0}+s*\vektor{1\\1\\0}+t*\vektor{2\\0\\1}
-	\end{align*}
-	\begin{align*}
-		&6v_1+v_2-v_3=0 \rightarrow\vec v=\vektor{1\\0\\6}
-		&6u_1+u_2-u_3=0 \rightarrow\vec u=\vektor{0\\1\\1}\\
-		&E: \vec x=\vektor{0\\0\\7}+s*\vektor{1\\0\\6}+t*\vektor{0\\1\\1}
-	\end{align*}
-	Gleichsetzen der Ebenen durch $\vec x$:
-	\begin{align*}
-		\vektor{0\\0\\7}+a*\vektor{1\\0\\6}+b*\vektor{0\\1\\1}=\vektor{7\\0\\0}+c*\vektor{1\\1\\0}+d*\vektor{2\\0\\1}\\
-		a*\vektor{1\\0\\6}+b*\vektor{0\\1\\1}-c*\vektor{1\\1\\0}-d*\vektor{2\\0\\1}=\vektor{7\\0\\-7}
-	\end{align*}
-	Aufstellen einer geeigneten Matrix:
-	\begin{align*}
-		\ematrix{rrrr|r}
-		{1 & 0 & -1 & -2 & 7\\
-		0 & 1 & -1 & 0 & 0\\
-		6 & 1 & 0 & -1 & -7}\rightsquigarrow
-		\ematrix{rrrr|r}
-		{1 & 0 & 0 & \sfrac{-3}{7} & 0\\
-		0 & 1 & 0 & \sfrac{11}{7} & -7\\
-		0 & 0 & 1 & \sfrac{11}{7} & -7}
-	\end{align*}
-	Einsetzen in die obere Gleichung:
-	\begin{align*}
-		&\frac37*\vektor{1\\0\\6}+(-7-\frac{11}{7})*\vektor{0\\1\\1}-(-7-\frac{11}{7})*\vektor{1\\1\\0}-d*\vektor{2\\0\\1}=\vektor{7\\0\\-7}\\
-		&\vektor{\sfrac37\\0\\\sfrac{18}{7}}+\vektor{0\\\sfrac{-60}{7}\\\sfrac{-60}{7}}+\vektor{\sfrac{60}{7}\\\sfrac{60}{7}\\0}-d*\vektor{2\\0\\1}=\vektor{7\\0\\-7}\\
-		&g: \vec x = \vektor{2\\0\\1}+d*\vektor{2\\0\\1}
-	\end{align*}
 
+
+
+\aufgabe{Vektorrechnung: } Gegeben sind die Punkte $A(2|-1|2), B(5|-2|4), C(4|3|1)$ und $D(3|8|3)$. \cas
+\begin{enumerate}
+	\item Zeige, dass die Punkte $A,B,C$ und $D$ nicht in einer Ebene liegen.
+	\item Prüfe, ob sich die Geraden $g$ durch $A$ und $B$ sowie die Gerade $h$ durch $A$ und $C$ orthogonal schneiden.
+	\item Untersuche, ob das Dreieck $ABC$ gleichschenklig ist.
+\end{enumerate}
+\begin{lsg}{}
+	\begin{enumerate}
+		\item Aufstellen einer Ebenengleichung, die $B,C$ und $D$ enthält:
+		\begin{equation*}
+			E: \vec x=\vektor{5\\-2\\4}+r*\vektor{-1\\5\\-3}+s*\vektor{-2\\10\\-1}
+		\end{equation*}
+		Einsetzen von $A$ in $\vec x$, lösen des LGS mit dem CAS: Keine Lösung, d.h. liegen nicht in einer Ebene.
+		\item\begin{align*}
+			\overrightarrow{AB}*\overrightarrow{AC}&\overset!=0\\
+			\vektor{3\\-1\\2}*\vektor{2\\4\\-1}&=3*2-4-2=0
+		\end{align*}
+		Die Geraden schneiden sich also rechtwinklig.
+		\item Da $ABC$ ein rechtwinkliges Dreieck ist, müssen nur die Katheten, also die Längen $|\overrightarrow{AB}|$ und $|\overrightarrow{AC}|$ betrachtet werden.\begin{align*}
+			&|\overrightarrow{AB}|=\sqrt{9+1+4}=\sqrt{14}\\
+			&|\overrightarrow{AC}|=\sqrt{4+16+1}=\sqrt{21}
+		\end{align*}
+		Da $\sqrt{21}\neq \sqrt{14}$ ist, kann das Dreieck nicht gleichschenklig sein.
+	\end{enumerate}
+\end{lsg}
+
+
+
+
+\aufgabe{Geometriegewurschtel: } Die Grundfläche einer vierseitigen Pyramide liegt in der Ebene $E$ und hat die Eckpunkte $A(0|1|1),B(2|4|-5),C(-1|10|-3),D(-3|7|3)$.\cas
+
+Die Spitze der Pyramide liegt auf der Geraden
+\begin{equation*}
+	g:\vec x=\vektor{9\\10\\12}+s*\vektor{1\\3\\17}
+\end{equation*}
+\begin{enumerate}
+	\item Zeige, dass die Grundfläche der Pyramide ein Quadrat ist. Bestimmen Sie eine Koordinatengleichung der Ebene $E$.
+	\item Die Pyramidenspitze kann auf der Geraden $g$ so gewählt werden, dass die vier von der Grundfläche zur Pyramidenspitze verlaufenden Kanten gleich lang sind. Berechne die Koordinaten der Spitze für diesen Fall.
+	\item Die Pyramidenspitze $S$ kann auf der Geraden $g$ auch so gewählt werden, dass die Seitenfläche $ABS$ orthogonal ist. Berechnen Sie die Koordinaten der Spitze für diesen Fall.
+\end{enumerate}
+\begin{lsg}{}
+	\begin{enumerate}
+		\item Es müssen die \textbf{vier} Seitenlängen auf Gleichheit geprüft werden. Zusätzlich muss mindestens ein Winkel auf Rechtwinkligkeit geprüft werden. (Alle Seitenlängen sind $7$)
+		\item
+		\begin{align*}
+			&E:\vektor{2\\4\\-5}+t*\vektor{2\\3\\-6}+r*\vektor{-3\\6\\2}\\
+			\rightsquigarrow&E:\left[\vec x-\vektor{2\\4\\-5}\right]*\vektor{2\\3\\-6}\times\vektor{-3\\6\\2}=0\\
+			\Leftrightarrow &E:\left[\vec x-\vektor{2\\4\\-5}\right]*\vektor{42\\14\\21}=0\\
+			\rightsquigarrow&E:42x_1+14x_2+21x_3=35
+		\end{align*}
+		\item Damit alle vier Kanten die gleiche Länge haben, muss sich die Spitze rechtwinklig über dem Schnittpunkt der Diagonalen, also dem Mittelpunkt $M$ befinden.
+		\begin{equation*}
+			\overrightarrow{OM}=\overrightarrow{OA}+\frac12\overrightarrow{AC}=\vektor{0\\1\\1}+\frac12\vektor{-1\\9\\-4}
+			=\vektor{-0,5\\5,5\\-1}
+		\end{equation*}
+		Aufstellen einer Gerade, die rechtwinklig zur Grundebene $E$ verläuft:
+		\begin{equation*}
+			m:\vec x=\vektor{-0,5\\5,5\\-1}+q*\vektor{42\\14\\21}
+		\end{equation*}
+		Die gesuchte Spitze ist der Schnittpunkt von $g$ mit $m$:
+		Aufstellen eines LGS und Lösen mit dem CAS liefert die Ergebnise $q=\frac 3{14}, s=-0,5$
+		Einsetzen von $s$:
+		\begin{equation*}
+			\overrightarrow{OS}=\vektor{9\\10\\12}-0,5*\vektor{1\\3\\17}=\vektor{\sfrac{17}2\\\sfrac{17}2\\\sfrac{7}2}
+		\end{equation*}
+		\item Aufstellen einer Ebene $K$, die rechtwinklig auf $E$ steht und die Punkte $A$ und $B$ enthält.
+		\begin{equation*}
+			K: \vec x=\vektor{0\\1\\1}+r*\vektor{2\\3\\-6}+s*\vektor{42\\14\\21}
+		\end{equation*}
+		Gesucht ist der Schnittpunkt von $K$ und $g$.
+		\begin{align*}
+			\vektor{9\\10\\12}+a*\vektor{1\\3\\17}=\vektor{0\\1\\1}+b*\vektor{2\\3\\-6}+c*\vektor{42\\14\\21}\\
+			a*\vektor{1\\3\\17}-b*\vektor{2\\3\\-6}-c*\vektor{42\\14\\21}=\vektor{-9\\-9\\-11}\\
+			\ematrix{rrr|r}{1&-2&-42&-9\\3&-3&-14&-9\\17&6&-21&-11}\rightsquigarrow\ematrix{rrr|r}{1&0&0&-1\\0&1&0&\sfrac{10}7\\0&0&1&\sfrac6{49}}
+		\end{align*}
+		Einsetzen von $a=s=-1$ in die Geradengleichung ergibt den Ortsvektor der Spitze:
+		\begin{equation*}
+			\overrightarrow{OS}=\vektor{9\\10\\12}-\vektor{1\\3\\17}=\vektor{8\\7\\-5}
+		\end{equation*}
+	\end{enumerate}
 \end{lsg}
 
 \end{document}
