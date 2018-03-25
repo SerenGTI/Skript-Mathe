@@ -1,8 +1,6 @@
 ﻿0 fertig
 
-1
-Extrempunkte 1
-
+1 fertig
 
 2
 Ebenen aufstellen
