@@ -1,23 +1,21 @@
-﻿0 fertig
+﻿0 montag fertig
 
-<<<<<<< HEAD
+
 1 dienstag fertig
-=======
-1 fertig
->>>>>>> 58c5dc3ab948231a40f545525eeb5295f8aa670d
 
-2
-Ebenen aufstellen
+2 mittwoch
+Lösungen für Ebenenaufgabe
+Layout, dann fertig
 
 
-3
+3 donnerstag
 Abstände
 Geraden im Raum
 Winkel
 
 
 
-4
+4 freitag
 siehe Aufgabenblatt stochastik
 
 
