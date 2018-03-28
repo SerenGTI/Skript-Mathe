@@ -95,11 +95,9 @@ Kann Tim bei einem Signifikanzniveau von $6\%$ die Behauptung von Eva widerlegen
 \end{lsg}
 
 
-\vspace{1em}
+\clearpage
 
-\hrule
-
-\aufgabe{1 bissl Vernischtes zun Abgeschluss: }
+\aufgabe{Wiederholung: }
 \begin{enumerate}
 	\item Gegeben sei folgende Funktion: $F(x,y)=2x^3-5y+x^2+10x-10$. Bestimmen Sie die Ableitung der durch $F(x,y)=0$ implizit gegebenen Funktion $y=h(x)$.
 	\item Gegeben sind die Funktionen:
@@ -140,4 +138,49 @@ Kann Tim bei einem Signifikanzniveau von $6\%$ die Behauptung von Eva widerlegen
 		\end{align*}
 	\end{enumerate}
 \end{lsg}
+
+
+
+\aufgabe{Wiederholung: } (vgl. Abitur 2015)
+\begin{multicols}{2}
+	Die Abbildung zeigt den Graphen der Ableitungsfunktion $f'$ einer ganzrationalen Funktion $f$.
+	Entscheide ob die folgenden Aussagen wahr oder falsch sind. Begründe jeweils Deine Antwort.
+	\begin{enumerate}
+		\item Der Graph von $f$ hat bei $x=-3$ einen Tiefpunkt.
+		\item $f(-2)<f(-1)$
+		\item $f''(-2)+f'(-2)<1$
+		\item Der Grad der Funktion $f$ ist mindestens vier.
+	\end{enumerate}
+	\columnbreak
+	\centering
+	\includegraphics[width=0.7\linewidth]{Graphanalyse.png}
+\end{multicols}
+\begin{lsg}{}
+	\begin{enumerate}
+		\item Wahr, Vorzeichenwechsel bei $x=-3$
+		\item Wahr, streng monoton steigend im Intervall $[-2;-1]$
+		\item Falsch, $f''(-2)+f'(-2)=0+2>1$
+		\item Wahr, $f'$ besitzt zwei Extrempunkte $\rightsquigarrow f''$ ist mindestens vom Grad 2. Der Graph der Abbildung könnte auch drei Nullstellen haben, $f'$ ist also mindestens vom Grad 3.
+	\end{enumerate}
+\end{lsg}
+
+
+
+
+\aufgabe{Wiederholung: } Bestimme die Lage der Geraden zueinander und ggf. den Schnittwinkel der beiden Geraden $g$ und $h$:
+\begin{equation*}
+	g: \vec x = \vektor{2\\2\\-3} + r*\vektor{2\\1\\-1} \text{ und } h: \vec x = \vektor{3\\0\\-1} + s* \vektor{1\\-2\\2}
+\end{equation*}
+\begin{lsg}{}
+	Geraden sind nicht parallel, da die Richtungsvektoren nicht vielfache voneinander sind. Probe auf Schnittpunkt oder windschief:
+
+	Gleichsetzen der Geradengleichungen ergibt mit $s=-1$ den Schnittpunkt $S(2|2|-3)$.
+
+	Schnittwinkel:
+	\begin{align*}
+		&\angle \vektor{2\\1\\-1}, \vektor{1\\-2\\2}=\alpha\\
+		\alpha &= \arccos\frac{\left|\vektor{2\\1\\-1}* \vektor{1\\-2\\2}\right|}{\sqrt{2^2+1+1}*\sqrt{1+2^2+2^2}}=\arccos\frac{2}{\sqrt{6}*3}=74,21^\circ
+	\end{align*}
+\end{lsg}
+
 \end{document}
