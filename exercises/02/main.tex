@@ -3,9 +3,9 @@
 
 \begin{document}
 \begin{inhalt}
-	\item Wachstum\seite{51}
-	\item LGS-Rechnung \seite{57}, Vektorrechnung \seite{69}
-	\item Geraden und Ebenen \seite{73}
+	\item Wachstum\seite{47}
+	\item LGS-Rechnung \seite{53}, Vektorrechnung \seite{63}
+	\item Geraden und Ebenen \seite{67}
 \end{inhalt}
 
 
@@ -167,7 +167,7 @@ Welche Temperatur hat der Milchkaffee in beiden Fällen?
 
 
 
-\aufgabe{\color{red}Ebenengleichungen: }
+\aufgabe{Ebenengleichungen: }
 Bestimme die Ebene in der angegebenen Darstellungsform:
 \begin{enumerate}
 	\item $E$ enthält die Punkte $A(2|2|2), B(4|1|3)$ und $C(8|4|5)$. Gib $E$ in Normalenform an. %Parameterform -> Normalenform,
@@ -183,8 +183,13 @@ Bestimme die Ebene in der angegebenen Darstellungsform:
 		\begin{equation*}
 			F: \left[\vec x - \frac{1}{2}*\overrightarrow{AA'}+\overrightarrow{OA}\right]*\overrightarrow{AA'}=0\rightsquigarrow F: \left[\vec x - \vektor{2\\3\\5}\right]*\vektor{2\\-2\\-4}=0
 		\end{equation*}
-		In Parameterform umwandeln:
-		\item
+		In Parameterform umwandeln: Beliebiger Spannvektor senkrecht zum Normalenvektor\\ $\Rightarrow$ setze $\vektor{1\\0\\a}*\vektor{2\\-2\\-4}=0 \rightsquigarrow a=\frac{1}{2}$\\
+		$\Rightarrow$ setze $\vektor{0\\1\\b}*\vektor{2\\-2\\-4}=0 \rightsquigarrow b=-\frac{1}{2}$\\
+		Damit gilt für die Ebene: $F:\vec{x}=\vektor{2\\3\\5}+s*\vektor{1\\0\\1/2}+t*\vektor{0\\1\\-1/2}$
+		\item Aus der Geraden und dem Normalenvektor von $H$ bildet sich die Parameterform von $G$: \\$G: \vec{x}=\vektor{3\\1\\2}+s*\vektor{2\\0\\-1}+t*\vektor{-1\\1\\2}$\\
+		Parameter in Koordinatenform:
+		$\vec{n}=\vektor{2\\0\\-1}\times \vektor{-1\\1\\2}=\vektor{1\\-3\\2}\ $ und $d=\vektor{1\\-3\\2}*\vektor{3\\1\\2}=4$\\
+		damit gilt $G:x_1-3x_2+2x_3=4$ 
 	\end{enumerate}
 \end{lsg}
 
