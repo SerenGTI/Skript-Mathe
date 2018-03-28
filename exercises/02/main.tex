@@ -172,7 +172,12 @@ Bestimme die Ebene in der angegebenen Darstellungsform:
 \begin{enumerate}
 	\item $E$ enthält die Punkte $A(2|2|2), B(4|1|3)$ und $C(8|4|5)$. Gib $E$ in Normalenform an. %Parameterform -> Normalenform,
 	\item Die gesuchte Ebene $F$ ist die Spiegelebene zwischen $A(1|4|7)$ und $A'(3|2|3)$. Gib $F$ in Parameterform an. %Normalenform -> Parameterform
-	\item Die Ebene $G$ enthält die Gerade $\vec x = \vektor{3\\1\\2}+s*\vektor{2\\0\\-1}$ und ist orthogonal zur Ebene $H:-x_1+x_2+2x_3+2=0$. Gib die Ebene $G$ in Koordinatenform an. %Parameterform -> Koordinatenform
+	\item Die Ebene $G$ ist orthogonal zur Ebene $H:-x_1+x_2+2x_3+2=0$ und enthält die Gerade
+	\begin{equation*}
+		g: \vec x = \vektor{3\\1\\2}+s*\vektor{2\\0\\-1}
+	\end{equation*}
+	Gib die Ebene $G$ in Koordinatenform an. %Parameterform -> Koordinatenform
+	\item Gegeben ist die Gleichung einer Ebene $E$ mit $3x_1+x_2-4x_3=2$. Bestimme die Gleichung der Ebene in Normalen- und Parameterform.
 \end{enumerate}
 \begin{lsg}{}
 	\begin{enumerate}
@@ -189,10 +194,22 @@ Bestimme die Ebene in der angegebenen Darstellungsform:
 		\item Aus der Geraden und dem Normalenvektor von $H$ bildet sich die Parameterform von $G$: \\$G: \vec{x}=\vektor{3\\1\\2}+s*\vektor{2\\0\\-1}+t*\vektor{-1\\1\\2}$\\
 		Parameter in Koordinatenform:
 		$\vec{n}=\vektor{2\\0\\-1}\times \vektor{-1\\1\\2}=\vektor{1\\-3\\2}\ $ und $d=\vektor{1\\-3\\2}*\vektor{3\\1\\2}=4$\\
-		damit gilt $G:x_1-3x_2+2x_3=4$ 
+		damit gilt $G:x_1-3x_2+2x_3=4$
+		\item Zunächst in die Parameterform:\\
+		$3x_1+x_2-4x_3=2 \Longleftrightarrow x_2=2-3x_1+4x_3$
+		\begin{align*}
+			\vec x &=\vektor{0 &+& x_1 &+& 0\\2 &-& 3x_1 &+& 4x_3\\0 &+& 0 &+& x_3}\\
+							&=\vektor{0\\2\\0}+r*\vektor{1\\-3\\0}+s*\vektor{0\\4\\1}
+		\end{align*}
+		Und aus der Parameterform in die Normalenform:
+		\begin{equation*}
+			\vec n=\vektor{1\\-3\\0}\times\vektor{0\\4\\1}=\vektor{-3\\-1\\4}
+		\end{equation*}
+		\begin{equation*}
+			\rightsquigarrow \left[\vec x-\vektor{0\\2\\0}\right]*\vektor{-3\\-1\\4}=0
+		\end{equation*}
 	\end{enumerate}
 \end{lsg}
-
 
 
 
@@ -241,21 +258,6 @@ Gib die Lösungsmenge der Gleichungssysteme an:
 \end{lsg}
 
 
-\aufgabe{Ebenengleichungen: } Gegeben ist die Gleichung einer Ebene $E$ mit $3x_1+x_2-4x_3=2$. Bestimme die Gleichung der Ebene in Normalen- und Parameterform.
-\begin{lsg}{}
-	Zunächst in die Parameterform:\\
-	$3x_1+x_2-4x_3=2 \Longleftrightarrow x_2=2-3x_1+4x_3$
-	\begin{align*}
-		\vec x &=\vektor{0 &+& x_1 &+& 0\\2 &-& 3x_1 &+& 4x_3\\0 &+& 0 &+& x_3}\\
-						&=\vektor{0\\2\\0}+r*\vektor{1\\-3\\0}+s*\vektor{0\\4\\1}
-	\end{align*}
-	Und aus der Parameterform in die Normalenform:
-	\begin{equation*}
-		\vec n=\vektor{1\\-3\\0}\times\vektor{0\\4\\1}=\vektor{-3\\-1\\4}
-	\end{equation*}
-	\begin{equation*}
-		\rightsquigarrow \left[\vec x-\vektor{0\\2\\0}\right]*\vektor{-3\\-1\\4}=0
-	\end{equation*}
-\end{lsg}
+
 
 \end{document}
