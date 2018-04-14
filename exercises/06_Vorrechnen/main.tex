@@ -1,4 +1,6 @@
 \input{../master/layout}
+
+\usepackage{xfrac}
 \chead{Vorrechnen}
 \everymath{\displaystyle}
 
@@ -11,16 +13,78 @@
 \end{equation*}
 
 \begin{equation*}
-  f(x)=\sqrt[7]{\cos(-3x)+2} \quad f'(x)=\frac 3 7(\cos(-3x)+2)^{-\frac{6}{7}}*\sin(-3x)
+  f(x)=\sqrt[7]{\cos(-3x)+2} \quad f'(x)=\frac 3 7(\cos(-3x)+2)^{-\sfrac{6}{7}}*\sin(-3x)
 \end{equation*}
 
-\subsection{Tangente Normale}
-Funktion: $f(x)=-2x^2+x^3+2$ Normale durch $N(0|1)$.
 
 
 
 
 
-\section{Dienstag}
+
+\clearpage
+\vspace*{5em}
+\renewcommand*{\arraystretch}{1.4}
+\begin{tabular}{r|l|l}
+								& \bf Differenzialgleichung & \bf Funktionsterm\\
+	\bf linear 				& $f'(t)=k$ 						&	$f(t)=k*t+c$ \\
+	\bf exponentiell 	& $f'(t)=b*f(t)$ 				& $f(t)=f(0)*\e^{\ln(b)*t}$\\
+	\bf beschränkt 		& $f'(t)=b*(S-f(t))$ 		& $f(t)=S-(S-f(0))*\e^{-\ln(b)*t}$ \\
+\end{tabular}
+\vspace{3em3}
+\begin{description}
+	\item[$b$] Wachstumsfaktor
+	\item[$k$] $=\ln(b)$ Wachstumskonstante
+	\item[$S$] Schranke
+\end{description}
+
+\clearpage
+\begin{align*}
+	f(t_V)&=2*f(0)\\
+	f(0)*\e^{k*t_V}&=2*f(0)\\
+	\e^{k*t_V}&=2\\
+	k*t_V&=\ln(2)\\
+	t_V&=\frac{\ln(2)}{k}
+\end{align*}
+\begin{align*}
+	f(t_H)&=\frac{f(0)}{2}\\
+	f(0)*\e^{k*t_H}&=\frac{f(0)}{2}\\
+	\e^{k*t_H}&=\frac{1}{2}\\
+	k*t_H&=\ln\left(\frac12\right)\\
+	k*t_H&=\ln(1)-\ln(2)\\
+	k*t_H&=0-\ln(2)\\
+	t_H&=\frac{-\ln(2)}{k}\\
+\end{align*}
+
+\clearpage
+\section{Mittwoch}\
+Stelle eine Funktionsgleichung für das Wachstum auf und gib die Art des Wachstums an.
+\begin{enumerate}
+	\item Eine Bakterienkultur besteht anfänglich aus 500 Bakterien. Ihre Anzahl nimmt jede Stunde um 50\% zu.
+	\item Ein in trübes Wasser fallender Lichtstrahl wird pro Meter Wassertiefe um 30\% schwächer
+	\item Bei einer neuen App erwartet man maximal 30 000 Käufer.
+	In einem Modell soll angenommen werden, dass sich die Gesamtzahl der Käufer nach dem Gesetz des beschränkten Wachstums entwickelt.
+	Sechs Monate nach Verkaufsbeginn gibt es bereits 20 000 Käufer.
+	Bestimmen Sie einen Funktionsterm, welcher die Gesamtzahl der Käufer in Abhängigkeit von der Zeit beschreibt. (vgl. Abi 2017 A1)
+\end{enumerate}
+
+
+\begin{alignat*}{3}
+	&8x_1 &+7x_2 &-3x_3 &= 17\\
+	&2x_1 &+x_2 &-1x_3 &= 1\\
+	&6x_1 &+3x_2 &-2x_3 &= 7\\
+\end{alignat*}
+\begin{alignat*}{3}
+	&10x_1 &+14x_2 &-1x_3 &= -1\\
+	&20x_1 &+34x_2 &-3x_3 &= -20\\
+	&15x_1 &+21x_2 &-0,5x_3 &= 25,5\\
+\end{alignat*}
+\begin{alignat*}{3}
+	&\frac{16}{3}x_1 &+\frac{8}{3}x_2 &+\frac{8}{3}x_3 &= \frac{88}{3}\\
+	&\frac{20}{3}x_1 &+4x_2 &+4x_3 &= 24\\
+	&0x_1 &+\frac{4}{3}x_2 &+\frac{4}{3}x_3 &= 4\\
+\end{alignat*}
+
+
 
 \end{document}

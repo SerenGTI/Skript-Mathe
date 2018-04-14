@@ -69,7 +69,7 @@ Die äußere Funktion ist $x^4$, die innere Funktion ist $2x-1$.\\
 	\begin{multicols}{4}
 		\begin{enumerate}
 			\item unentscheidbar
-			\item falsch
+			\item richtig
 			\item richtig
 			\item richtig
 			\item falsch
@@ -342,19 +342,21 @@ Im Folgenden werden nur Personen der angegebenn Altersgruppe betrachtet.
 
 			$X_2$ kann als $\bin{20;0,458}$ angenommen werden.
 
-			$P(B)=P(X_1>8)=0,6137\approx 61,4\%$
+			$P(B)=P(X_2>8)=0,6137\approx 61,4\%$
 			\item Der letzte ist Raucher, d.h. vorher 7 Raucher. $X_3$ beschreibt die Anzahl der Raucher unter 19 Personen.
 
 			$X_3$ kann als $\bin{19;0,321}$ angenommen werden.
 
-			$P(C)=P(X_1=7)*0321=0,0546\approx 5,5\%$
+			$P(C)=P(X_3=7)*0321=0,0546\approx 5,5\%$
 			\item Die ersten drei Nichtraucher $X_4$ beschreibt die Anzahl der regelmäßigen Raucher unter 17 Personen.
 
 			$X_2$ kann als $\bin{20;0,458}$ angenommen werden.
 
-			$P(B)=0,679^3*P(X_1\geq6)=0,1053\approx 10,5\%$
+			$P(B)=0,679^3*P(X_4\geq6)=0,1053\approx 10,5\%$
 		\end{itemize}
-		\item Es gibt zwei Pfade: 6 regelmäßige Raucher und ein Gelegenheitsraucher bestehen die Kur oder 7 regelmäßige Raucher schaffen es.
+		\item $X$ beschreibt die Anzahl regelmäßiger Raucher, die die Kur bestehen. $X$ kann als $\bin{7;0,6}$ angenommen werden.
+
+		Es gibt drei Pfade: 6 regelmäßige Raucher und ein Gelegenheitsraucher bestehen die Kur oder 7 regelmäßige Raucher schaffen es, dabei wird unterschieden ob der letzte, der Gelegenheitsraucher die Kur besteht oder nicht.
 
 		$w=P(X=7)*0,8+P(X=7)*0,2+P(X=6)*0,8=0,1325\approx 13,3\%$
 		\item Der Anteil der Nichtraucher unter unter den Mitgliedern der Krankenkasse sei p.

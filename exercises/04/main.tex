@@ -13,7 +13,7 @@
 Ein Fußballspieler verwandelt erfahrungsgemäß $90\%$ aller Elfmeter.
 \begin{enumerate}
 	\item Mit welcher Wahrscheinlichkeit verwandelt er von drei Elfmetern nur den ersten bzw. mindestens einen?
-	\item Für ein Ereignis $C$ gilt: $P(C)=\binom{40}{x}*0,9^y+z^8$ Gib geeignete Werte für $x,y$ und $z$ an. Beschreibe $C$ in Worten.
+	\item Für ein Ereignis $C$ gilt: $P(C)=\binom{40}{x}*0,9^y*z^8$ Gib geeignete Werte für $x,y$ und $z$ an. Beschreibe $C$ in Worten.
 \end{enumerate}
 \begin{lsg}{}
 	\begin{enumerate}
@@ -82,15 +82,15 @@ Kann Tim bei einem Signifikanzniveau von $6\%$ die Behauptung von Eva widerlegen
 
 \begin{lsg}{}
 	\begin{align*}
-		&n=60, H_0:p_4\geq 15\%, \alpha=0.06
+		&n=60, H_0:p_4> 15\%, \alpha=0.06
 		\intertext{$X$ ist die Anzahl geworfener 4er, $X$ ist binomialverteilt.}
-		B_{60;0,15}\quad & P(X\geq k )\leq 0,06\\
-		&P(X\geq 13)=0,106\\
-		&P(X\geq 14)=0,0578
+		B_{60;0,15}\quad & P(X\geq k )\geq 0,94\\
+		&P(X\geq 13)=0,94\\
+		&P(X\geq 14)=0,97
 		\intertext{Damit bildet 13 die Grenze des Annahmebereichs.}
 		&A=\simpleset{0,1,\ldots,13}\\
 		&\overline A =\simpleset{14,\ldots,60}
-		\intertext{Das heißt, Tim kann die Behauptung nicht widerlegen, denn 12 liegt nicht in $A$.}
+		\intertext{Tim kann die Behauptung nicht widerlegen, denn 12 liegt in $\overline A$.}
 	\end{align*}
 \end{lsg}
 

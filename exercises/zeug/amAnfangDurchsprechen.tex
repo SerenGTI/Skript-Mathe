@@ -1,0 +1,200 @@
+\documentclass[a4paper, oneside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[paperheight=13.5cm,paperwidth=24cm,top=2.5cm,left=2cm,right=2cm,bottom=2cm,heightrounded]{geometry}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage[default]{sourcesanspro}
+\usepackage[T1]{fontenc}
+\usepackage[font=footnotesize]{caption}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage[fleqn]{mathtools}
+\usepackage{amssymb}
+\usepackage[noindentafter]{titlesec}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{wasysym}
+
+
+\usepackage[framemethod=TikZ]{mdframed}
+\mdfdefinestyle{badExpl}{%
+  linecolor=red,
+  outerlinewidth=1pt,
+  roundcorner=4pt,
+  innertopmargin=\baselineskip,
+  innerbottommargin=\baselineskip,
+  innerrightmargin=20pt,
+  innerleftmargin=20pt,
+  backgroundcolor=gray!10!white
+}
+\mdfdefinestyle{goodExpl}{%
+  linecolor=green,
+  outerlinewidth=1pt,
+  roundcorner=4pt,
+  innertopmargin=\baselineskip,
+  innerbottommargin=\baselineskip,
+  innerrightmargin=20pt,
+  innerleftmargin=20pt,
+  backgroundcolor=gray!10!white
+}
+
+
+%%%SECTIONING
+
+\everymath{\displaystyle}
+
+%Malpunkte
+\mathcode`\*="8000
+{\catcode`\*\active\gdef*{\cdot}}
+
+%SECTION
+\titleformat{\section}
+{\vspace{1em}\Large\raggedright\bfseries}
+{}
+{0pt}
+{}
+
+\titleformat{\subsection}[runin]
+{\vspace{1px}\normalfont\raggedright\bfseries}
+{A\theaufgabe: }
+{0pt}
+{\ }
+
+\titleformat{\subsubsection}[runin]
+{\normalfont\raggedright\bfseries}
+{Lösung \theaufgabe: }
+{0pt}
+{\ }
+
+
+%FANCYHDR
+\pagestyle{fancy}
+\lhead{\small Simon König \& Joshua Fabian}
+\rhead{\small Mathecrashkurs 2018}
+\cfoot{}
+\lfoot{}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\title{Mathe-Crashkurs 2018}
+\date{\today}
+\author{Simon König, Joshua Fabian}
+\chead{}
+
+
+\setlength\columnsep{50pt}
+
+
+\begin{document}
+\section*{Organisatorisches}
+	\begin{itemize}
+		\item Wer zum Rauchen raus geht, bitte Tür schließen und weg vom Eingang gehen.
+		\item Cafe Schwarz bleibt aus Hygienegründen geschlossen.
+		\item Freiweilliges Arbeiten, insbesondere keine Anwesenheitspflicht. Stört die anderen aber nicht.
+	\end{itemize}
+
+\clearpage
+\section*{Zeug zum Kurs}
+\begin{multicols}{2}
+	\begin{itemize}
+		\setlength\itemsep{3em}
+			\item Fragen stellen, unterbrechen bis alles klar ist sonst springen wir durch die Themen und haben das Skript heute Nachmittag fertig.
+			\item Überlegt euch was eure Schwachstellen sind, schaut euch auch eure eigenen Klausuren an:\\
+			Was lief schief? Was habt ihr noch nicht so richtig verstanden und arbeitet insbesondere daran.
+
+			Übt nicht das was ihr schon könnt, sondern das was nicht so gut läuft.
+			\item Es gibt jeden Tag ein Übungsblatt. Ihr dürft logischerweise auch eigene Sachen rechnen.
+			\item Die Lösungen zu den Übungsblättern gibt's auch digital als pdf - wichtig dafür: die Lösungen sollten (hoffentlich) richtig sein, sie sind jedoch \emph{nicht} so ausführlich wie sie auf Abiturniveau sein könnten/ sollten! Fragt also bei Unklarheiten zum Lösungsweg oä. nach.
+	\end{itemize}
+\end{multicols}
+
+\clearpage
+\section*{Tipps und Tricks im Abi}
+\begin{itemize}
+		\item Verwendet Skizzen o.ä. um euch die Aufgabe bildlich darzustellen. Das vereinfacht dann auch dem Korrektor euren Rechenweg nachzuvollziehen.
+		\item Aufschrieb kommentieren, der Korrektor soll nicht überlegen müssen was ihr tut! Solange der Korrektor glücklich ist, gibt's auch für falsche Ergebnisse Teilpunkte, also übt das ein bisschen:
+	\begin{multicols}{2}
+		\begin{mdframed}[style=badExpl]
+			\textbf{Nicht so gut:}
+			\begin{align*}
+				5x+4=3x-2\\
+				\Rightarrow x=-3
+		 \end{align*}
+		\end{mdframed}
+		\columnbreak
+		\begin{mdframed}[style=goodExpl]
+			\textbf{Sehr gut:}\\
+			Gleichsetzen der Funktionen:\begin{align*}
+				&5x+4=3x-2 \!{\color{red} \checkmark}
+				\intertext{Der CAS liefert die Schnittstelle:}
+				\overset{\text{CAS}}\Rightarrow& x=-3 \!{\color{red} \checkmark} &\text{\color{red} \smiley{}}
+		 \end{align*}
+		\end{mdframed}
+	\end{multicols}
+\end{itemize}
+
+
+
+
+
+\clearpage
+\section*{Grober Zeitplan für die Woche:}
+		\paragraph{Montag}
+		Themen des Übungsblatts \begin{itemize}
+			\item Gleichungen
+			\item Monotonie, Achsenschnittpunkte, Trigonometrie
+			\item Ableiten
+			\item Tangenten, Normalen
+		\end{itemize}
+
+		\paragraph{Dienstag}
+		Themen des Übungsblatts \begin{itemize}
+			\item Extremstellen und -Punkte
+			\item Exponentialfunktion
+			\item Funktionenscharen
+			\item Integral, Rotationskörper, Flächeninhalte
+			\item Funktionsanalyse, gebrochenrationale Funktionen, Asymptoten
+		\end{itemize}
+
+		\paragraph{Mittwoch}
+		Themen des Übungsblatts \begin{itemize}
+			\item Wachstum
+			\item LGS-Rechnung, Vektorrechnung
+			\item Geraden und Ebenen
+		\end{itemize}
+
+		\paragraph{Donnerstag}
+		Themen des Übungsblatts \begin{itemize}
+			\item Lagebeziehungen, Abstände
+			\item Winkelberechnungen und Spiegelungen
+		\end{itemize}
+		Freiwillig Nachmittags ein Probeabitur durchrechnen, wird (hoffentlich) auf Freitag korrigiert und dann durchgesprochen\\
+		Alternativ Übungsblatt rechnen (je nachdem wie viel Zeit ist auch beides)\\
+
+\clearpage
+		\paragraph{Freitag}
+		Themen des Übungsblatts \begin{itemize}
+			\item Zufallsexperimente
+			\item Kombinatorik, Binomalverteilung und Bernoulli-Versuch
+			\item Hypothesentest
+			\item Vermischtes
+		\end{itemize}
+		 Besprechung des Abiturs\\
+
+
+\clearpage
+\begin{align*}
+	&f(x)=x^5+2x-1\\
+	&g(x)=e^{2x}(x^4+2x)\\
+	&h(x)=4\sin\left(\frac 1 8x^2+x\right)+2\\
+	&i(x)=\frac{4x^2+2}{e^x}\\
+	&j(x)=x^x\\
+	&k(x)=
+	&l(x)=
+	&m(x)=
+	&n(x)=
+\end{align*}
+\end{document}
