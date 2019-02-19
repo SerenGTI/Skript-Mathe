@@ -4,8 +4,7 @@
 
 Dieses Skript behandelt den Stoff des Mathematikunterrichts in der Jahrgangsstufe 1 und 2 
 an baden-württembergischen Gymnasien. Es entstand im Rahmen eines 2016 am Schickhardt-Gymnasium 
-Herrenberg von [Jens Ochsenmeier](https://github.com/Jintzo) und [Lukas König](https://github.com/glowgrape) 
-gehaltenen Crashkurses und wurde 2017 für den zweiten Crashkurs überarbeitet. Da wir leider 
-2018 keinen Crashkurs mehr halten können werden haben wir uns entschieden, das Skript zu veröffentlichen.
+Herrenberg von [Jens Ochsenmeier](https://github.com/Jintzo) und [Lukas König](https://github.com/lukaskkoenig) 
+gehaltenen Crashkurses und wurde 2017 für den zweiten Crashkurs überarbeitet. 
 
-Wer das Skript gern gebunden haben möchte kann sich gern an die [Lichtpauserei Herrenberg](http://www.lichtpauserei-herrenberg.de/) wenden, die in beiden Jahren das Skript für alle Teilnehmer zu einem sehr fairen Preis gedruckt hat.
+Ab dem Crahskurs 2017 wurde das Skript von Joshua Fabian und Simon König weiter bearbeitet.
