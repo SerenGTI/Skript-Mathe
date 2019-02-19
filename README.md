@@ -7,4 +7,4 @@ an baden-württembergischen Gymnasien. Es entstand im Rahmen eines 2016 am Schic
 Herrenberg von [Jens Ochsenmeier](https://github.com/Jintzo) und [Lukas König](https://github.com/lukaskkoenig) 
 gehaltenen Crashkurses und wurde 2017 für den zweiten Crashkurs überarbeitet. 
 
-Ab dem Crahskurs 2017 wurde das Skript von Joshua Fabian und Simon König weiter bearbeitet.
+Ab dem Crahskurs 2017 wurde das Skript von [Joshua Fabian](https://github.com/joshi221) und [Simon König](https://github.com/serengti) weiter bearbeitet.
